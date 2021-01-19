@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "key": "First",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "img":"images/enFlag.png",
+      "altText":"First"
+    },{
+      "key": "Second",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+	    "img":"images/frFlag.png",
+      "altText":"Second"
+    },{
+      "key": "Last",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+	    "img":"images/ruFlag.png",
+      "altText":"Second"
+    },{
+      "key": "First",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "img":"images/enFlag.png",
+      "altText":"First"
+    },{
+      "key": "Second",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+	    "img":"images/frFlag.png",
+      "altText":"Second"
+    },{
+      "key": "Last",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+	    "img":"images/ruFlag.png",
+      "altText":"Second"
+    },{
+      "key": "First",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "img":"images/enFlag.png",
+      "altText":"First"
+    },{
+      "key": "Second",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+	    "img":"images/frFlag.png",
+      "altText":"Second"
+    },{
+      "key": "Last",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+	    "img":"images/ruFlag.png",
+      "altText":"Second"
+    },{
+      "key": "First",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "img":"images/enFlag.png",
+      "altText":"First"
+    },{
+      "key": "Second",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+	    "img":"images/frFlag.png",
+      "altText":"Second"
+    },{
+      "key": "Last",
+      "value": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+	    "img":"images/ruFlag.png",
+      "altText":"Second"
+    }    
+  ]
+}

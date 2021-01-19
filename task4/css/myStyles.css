@@ -1,0 +1,94 @@
+.main {
+	transition:0.3s all ease-in-out;
+	display: block;
+    position: fixed;
+    left: 200px;
+    top: 48px;
+    bottom: 24px;
+	right: 0px;
+	overflow-y: scroll;
+}
+.main.navNarrow {	
+    left: 60px;
+}
+.myNav{
+	color: #eee;
+	background: #242424;	
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 200px;
+	transition:0.3s all ease-in-out;
+	padding: 6px;	
+}
+.myNav.navNarrow{
+	width: 60px;
+}
+.links{
+	display: block;
+	padding-bottom: 6px;
+}
+header{
+	position: fixed;
+	height: 48px;
+	left: 200px;
+	right: 0px;
+	text-align: center;
+	background: #9b9b9b;
+	transition:0.3s all ease-in-out;
+}
+header.navNarrow{
+	left: 60px;
+}
+section{
+	padding: 12px;
+}
+footer{
+	position: fixed;
+	height: 24px;
+	left: 200px;
+	right: 0px;
+	bottom: 0px;
+	text-align: center;
+	color: #ffffff;
+	background: #000000;
+	transition:0.3s all ease-in-out;
+}
+footer.navNarrow{
+	left: 60px;
+}
+.myContainer {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
+}
+.myContent{
+    display: block;
+}
+#btnNavResize{
+	position: absolute;
+	left: 200px;
+	z-index: 1;
+}
+#btnNavResize{
+	position: absolute;
+	left: 200px;
+	z-index: 1;
+	margin: 5px;
+	transition:0.3s all ease-in-out;
+}
+#btnNavResize.navNarrow{
+	left: 60px;
+}
+.mainNavigation{
+	margin-top: 12px;
+}
+.card{
+	width: 18rem; 
+	margin-bottom: 12px;
+}
+.card-img-top{
+	width: 16rem;
+	height: 9rem;
+}

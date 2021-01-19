@@ -1,0 +1,225 @@
+{
+  "id": "bed9000c-6b53-4b9b-a8ae-58038efb0f40",
+  "version": "2.0",
+  "name": "youtube",
+  "url": "https://www.youtube.com",
+  "tests": [{
+    "id": "60ac82b6-17d2-41c3-b467-a38cf5c1ff66",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "26fcd052-1d13-413d-89eb-e1e51bf93c5e",
+    "name": "song search",
+    "commands": [{
+      "id": "6ae931ee-39db-4432-80d2-bb6f94622fff",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17a049db-96a1-4c4a-94be-aaf834339361",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1158x969",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c07115d3-d02b-4bcc-adec-91a3c1b903a7",
+      "comment": "",
+      "command": "click",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#sb_ifc50 > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='sb_ifc50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aeb74cd0-9d34-4dd4-9e31-5bbac47bdf3b",
+      "comment": "",
+      "command": "type",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#sb_ifc50 > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='sb_ifc50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Progressive Psytrance Mix - Dream Frequency"
+    }, {
+      "id": "297a77e8-93a8-4130-8414-706c5284ab29",
+      "comment": "",
+      "command": "click",
+      "target": "css=#search-icon-legacy > .style-scope:nth-child(1)",
+      "targets": [
+        ["css=#search-icon-legacy > .style-scope:nth-child(1)", "css:finder"],
+        ["xpath=//button[@id='search-icon-legacy']/yt-icon", "xpath:idRelative"],
+        ["xpath=//form/button/yt-icon", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89d9dd47-0a61-4cb9-b63a-20e13d9307dd",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#search-icon-legacy > .style-scope:nth-child(1)",
+      "targets": [
+        ["css=#search-icon-legacy > .style-scope:nth-child(1)", "css:finder"],
+        ["xpath=//button[@id='search-icon-legacy']/yt-icon", "xpath:idRelative"],
+        ["xpath=//form/button/yt-icon", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30d55792-71d1-4ca1-b20e-837192a33833",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#search-icon-legacy > .style-scope:nth-child(1)",
+      "targets": [
+        ["css=#search-icon-legacy > .style-scope:nth-child(1)", "css:finder"],
+        ["xpath=//button[@id='search-icon-legacy']/yt-icon", "xpath:idRelative"],
+        ["xpath=//form/button/yt-icon", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2312c40d-5219-47e8-a4d7-13790962c2a6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=search-icon-legacy",
+      "targets": [
+        ["id=search-icon-legacy", "id"],
+        ["css=#search-icon-legacy", "css:finder"],
+        ["xpath=//button[@id='search-icon-legacy']", "xpath:attributes"],
+        ["xpath=//form[@id='search-form']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "cd07638a-bf63-4ac8-951f-58db6545efa6",
+    "name": "song select",
+    "commands": [{
+      "id": "6485b1e6-b6ad-481c-b4fb-721541cbc978",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98a4a114-e5c5-4dd3-9e44-6e83d9f3a4d0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1158x969",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7776bfb6-faf9-400b-89cc-a422505f9ac1",
+      "comment": "",
+      "command": "click",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#sb_ifc50 > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='sb_ifc50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf17ae13-bc04-4b84-9085-96d62fa1b92f",
+      "comment": "",
+      "command": "type",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#sb_ifc50 > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='sb_ifc50']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Progressive Psytrance Mix - Dream Frequency"
+    }, {
+      "id": "8967931f-5cd4-45ae-980c-f7a684e0589a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#search-icon-legacy > .style-scope:nth-child(1)",
+      "targets": [
+        ["css=#search-icon-legacy > .style-scope:nth-child(1)", "css:finder"],
+        ["xpath=//button[@id='search-icon-legacy']/yt-icon", "xpath:idRelative"],
+        ["xpath=//form/button/yt-icon", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57c8b863-3262-4ade-a47c-5cb2c4530824",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ytd-item-section-renderer:nth-child(1) > #dismissable #video-title > .style-scope:nth-child(2)",
+      "targets": [
+        ["css=.ytd-item-section-renderer:nth-child(1) > #dismissable #video-title > .style-scope:nth-child(2)", "css:finder"],
+        ["xpath=//a[@id='video-title']/yt-formatted-string", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/h3/a/yt-formatted-string", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb0f2d19-b63f-415c-b336-8bbf032b3cbc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ytd-item-section-renderer:nth-child(1) > #dismissable #video-title > .style-scope:nth-child(2)",
+      "targets": [
+        ["css=.ytd-item-section-renderer:nth-child(1) > #dismissable #video-title > .style-scope:nth-child(2)", "css:finder"],
+        ["xpath=//a[@id='video-title']/yt-formatted-string", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/h3/a/yt-formatted-string", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e3539a8-ac7d-4a31-9486-637df65fdd7f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.ytd-item-section-renderer:nth-child(1) > #dismissable #video-title > .style-scope:nth-child(2)",
+      "targets": [
+        ["css=.ytd-item-section-renderer:nth-child(1) > #dismissable #video-title > .style-scope:nth-child(2)", "css:finder"],
+        ["xpath=//a[@id='video-title']/yt-formatted-string", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/h3/a/yt-formatted-string", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ef348ec-d4a9-4774-8168-f6b7ec1dd4e6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.ytd-compact-autoplay-renderer > #dismissable #img",
+      "targets": [
+        ["css=.ytd-compact-autoplay-renderer > #dismissable #img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i.ytimg.com/vi/7r5vS8IH2YQ/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDXCDOawLVu3tGLBhhtn9sN-wpeXw')]", "xpath:img"],
+        ["xpath=(//img[@id='img'])[50]", "xpath:attributes"],
+        ["xpath=(//a[@id='thumbnail']/yt-img-shadow/img)[24]", "xpath:idRelative"],
+        ["xpath=//ytd-compact-video-renderer/div/ytd-thumbnail/a/yt-img-shadow/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b681246b-4185-4702-a2dc-320397168213",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.ytd-compact-autoplay-renderer > #dismissable #img",
+      "targets": [
+        ["css=.ytd-compact-autoplay-renderer > #dismissable #img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i.ytimg.com/vi/7r5vS8IH2YQ/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDXCDOawLVu3tGLBhhtn9sN-wpeXw')]", "xpath:img"],
+        ["xpath=(//img[@id='img'])[50]", "xpath:attributes"],
+        ["xpath=(//a[@id='thumbnail']/yt-img-shadow/img)[24]", "xpath:idRelative"],
+        ["xpath=//ytd-compact-video-renderer/div/ytd-thumbnail/a/yt-img-shadow/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a075533f-565e-4570-88b4-145be02bbf41",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["60ac82b6-17d2-41c3-b467-a38cf5c1ff66"]
+  }],
+  "urls": ["https://www.youtube.com/"],
+  "plugins": []
+}

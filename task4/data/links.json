@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+    "key": "First Link",    
+    "url": "#",
+    "details": "First link details",
+    "btnValue": "#1",
+    "imagePath": "/images/enFlag.png"
+    },{
+    "key": "Second Link",
+    "url": "#",
+    "details": "Second link details",
+    "btnValue": "#2",
+    "imagePath": "/images/frFlag.png"
+    },{
+    "key": "Third Link",
+    "url": "#",
+    "details": "Third link details",
+    "btnValue": "#3",
+    "imagePath": "/images/ruFlag.png"
+    }
+  ]
+}

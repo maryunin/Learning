@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  background-color: #eee;
+  overflow-x: hidden;
+  overflow-y: hidden; 
+}
+.sidenav {
+  height: 100%;
+  width: 480px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: hidden; 
+}
+.loginform{
+    margin-left: 120px;
+    margin-top: 50%;
+	width: 240px;
+}
+.logo{
+	margin-left: 120px;
+	margin-top: 50px;
+}
+.copyright{
+    margin-left: 120px;
+    margin-top: 30%;
+}
+.mainImage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-left: 480px;
+	overflow-x: hidden;
+    overflow-y: hidden;
+  background-image: url('../images/fullhd.jpg');
+}
+@media screen and (max-width: 500px) {
+  div.mainImage {
+    display: none;
+  }
+}
