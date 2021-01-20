@@ -1,0 +1,7 @@
+D:\Learning\Learning\task11\task11_v2\task11_v2\bin\Debug\task11_v2.exe.config
+D:\Learning\Learning\task11\task11_v2\task11_v2\bin\Debug\task11_v2.exe
+D:\Learning\Learning\task11\task11_v2\task11_v2\bin\Debug\task11_v2.pdb
+D:\Learning\Learning\task11\task11_v2\task11_v2\obj\Debug\task11_v2.csprojAssemblyReference.cache
+D:\Learning\Learning\task11\task11_v2\task11_v2\obj\Debug\task11_v2.csproj.CoreCompileInputs.cache
+D:\Learning\Learning\task11\task11_v2\task11_v2\obj\Debug\task11_v2.exe
+D:\Learning\Learning\task11\task11_v2\task11_v2\obj\Debug\task11_v2.pdb

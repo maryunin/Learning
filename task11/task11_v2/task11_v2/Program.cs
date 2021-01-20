@@ -1,35 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
-namespace task11
+namespace task11_v2
 {
     class Program
     {
         static async Task Main(string[] args)
         {
+            string contentString, searchedString;
+            List<string> fileList = new List<string>();
             Dictionary<string, int> handledFileList = new Dictionary<string, int>();
-            List<string> myFilesNames = FolderHelper.GetFilesList();
-            foreach (string curFileName in myFilesNames) 
+            List<Task> countTaskList = new List<Task>();
+
+            switch (args.Length)
             {
-                handledFileList.Add(curFileName, await FileHanler.CountSearchedString(curFileName));
+                case 2:
+                    contentString = args[0];
+                    searchedString = args[1];
+                    break;
+                case 1:
+                    contentString = searchedString = args[0];
+                    break;
+                default:
+                    contentString = searchedString = "aaaa";
+                    break;
+            }
+
+            fileList = FileHelper.GetFilesList(contentString);
+
+            foreach (string curFileName in fileList)
+            {
+                countTaskList.Add(FileHelper.StringCounter(curFileName, handledFileList, searchedString));
                 Console.WriteLine(curFileName);
             }
-            FileHanler.SaveHanledList(handledFileList);
+            
+            await Task.WhenAll(countTaskList);
+            FileHelper.SaveHanledList(handledFileList);
         }
     }
-
-    static class FolderHelper 
-    {        
-        static public List<string> GetFilesList(string targetDirectory = @"D:\Learning\Data\task11\myFolder", string contentString = "aaaa") 
+    public static class FileHelper 
+    {
+        public static List<string> GetFilesList(string contentString = "aaaa", string targetDirectory = @"D:\Learning\Data\task11\myFolder")
         {
             List<string> fileList = new List<string>();
             string[] fileEntries = Directory.GetFiles(targetDirectory, "*.txt");
-            foreach (string fileName in fileEntries) 
-            {                
+            foreach (string fileName in fileEntries)
+            {
                 using (StreamReader sr = new StreamReader(fileName))
                 {
                     string contents = sr.ReadToEnd();
@@ -37,17 +57,15 @@ namespace task11
                     {
                         fileList.Add(fileName);
                     }
-                }                
+                }
             }
             return fileList;
         }
-    }
-
-    static class FileHanler {
-        static public async Task<int> CountSearchedString(string fileName, string searchedString = "aaaa") 
+        public static async Task StringCounter(string fileName, Dictionary<string, int> handledList, string searchedString = "aaaa")
         {
-            int total = 0;
-            if(File.Exists(fileName))
+            if (File.Exists(fileName))
+            {
+                int total = 0;
                 using (StreamReader sr = new StreamReader(fileName))
                 {
                     while (!sr.EndOfStream)
@@ -61,9 +79,11 @@ namespace task11
                         total += (wc == null) ? 0 : wc.Count;
                     }
                 }
-            return total;
+                handledList.Add(fileName, total);
+            }
+
         }
-        static public void SaveHanledList(Dictionary<string,int> handledFileList, string fileName = @"D:\Learning\Data\task11\handledFileList.txt") 
+        static public void SaveHanledList(Dictionary<string, int> handledFileList, string fileName = @"D:\Learning\Data\task11\handledFileList.txt")
         {
             using (StreamWriter file = new StreamWriter(fileName))
                 foreach (var entry in handledFileList)
