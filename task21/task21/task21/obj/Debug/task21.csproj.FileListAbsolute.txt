@@ -200,7 +200,6 @@ D:\Development\learning\task21\task21\task21\bin\Umbraco.Web.pdb
 D:\Development\learning\task21\task21\task21\bin\Umbraco.Web.xml
 D:\Development\learning\task21\task21\task21\bin\Umbraco.Web.UI.xml
 D:\Development\learning\task21\task21\task21\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Development\learning\task21\task21\task21\obj\Debug\task21.csprojAssemblyReference.cache
 D:\Development\learning\task21\task21\task21\obj\Debug\task21.csproj.CoreCompileInputs.cache
 D:\Development\learning\task21\task21\task21\obj\Debug\task21.csproj.CopyComplete
 D:\Development\learning\task21\task21\task21\obj\Debug\task21.dll
