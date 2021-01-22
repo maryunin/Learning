@@ -1,0 +1,42 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = null;
+    var site = Model.AncestorOrSelf<ContentModels.Site>();
+    var logoSrc = ((Image)site.Value("logo")).Url;
+}
+<html>
+<head>
+    <img src="@logoSrc" style="width:100px;" />
+    <title>@site.Value("title")</title>
+</head>
+<section class="sidebar">
+    <nav class="main" style="width:150px;">
+        @RenderChildNodes(site)
+    </nav>
+</section>
+<body>
+    @RenderBody()
+    <footer>@Html.Raw(site.Value("copyRights"))</footer>
+</body>
+</html>
+
+
+@helper RenderChildNodes(IPublishedContent parent)
+{
+    var childs = parent?.Children().OfType<ContentModels.APage>();
+    <ul>
+        @foreach (var item in childs)
+        {
+            var title = item.Value("menuTitle");
+            title = string.IsNullOrWhiteSpace(title.ToString()) ? item.Value("title") : title;
+            if ((bool)item.Value("isVisibleInMenu"))
+            {
+            <li>
+                <span>@title</span>
+                @RenderChildNodes(item)
+            </li>
+            }
+        }
+    </ul>
+}

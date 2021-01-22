@@ -11,9 +11,7 @@
     <title>@site.Value("title")</title>
 </head>
 <section class="sidebar">
-    <nav class="main" style="width:150px;">
-        @RenderChildNodes(site)
-    </nav>
+    @Html.Partial("Task21/Site/navigations/Main",site, new ViewDataDictionary { { "page", Model} })
 </section>
 <body>
     @RenderBody()
@@ -21,22 +19,3 @@
 </body>
 </html>
 
-
-@helper RenderChildNodes(IPublishedContent parent)
-{
-    var childs = parent?.Children().OfType<ContentModels.APage>();
-    <ul>
-        @foreach (var item in childs)
-        {
-            var title = item.Value("menuTitle");
-            title = string.IsNullOrWhiteSpace(title.ToString()) ? item.Value("title") : title;
-            if ((bool)item.Value("isVisibleInMenu"))
-            {
-            <li>
-                <span>@title</span>
-                @RenderChildNodes(item)
-            </li>
-            }
-        }
-    </ul>
-}
