@@ -4,11 +4,13 @@
 @{
     Layout = null;
     var site = Model.AncestorOrSelf<ContentModels.Site>();
+    @*var site = Model.AncestorOrSelf(); *@
+
     var logoSrc = ((Image)site.Value("logo")).Url;
 
 }
 <html>
-<head>    
+<head>
     <title>@site.Value("title")</title>
     <link rel="stylesheet" href="~/css/Libs/Bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/myStyles.css" />
