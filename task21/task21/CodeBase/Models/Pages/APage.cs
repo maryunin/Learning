@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Umbraco.Web;
 namespace CodeBase.Models
 {
-    public partial class Site
+    public partial class APage
     {
-        public string LogoUrl => this.Logo.Url;
+        public Site CurrentSite => this.CurrentSite;
     }
 }
