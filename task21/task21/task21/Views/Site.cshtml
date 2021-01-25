@@ -1,19 +1,25 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+﻿
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
     Layout = null;
     var site = Model.AncestorOrSelf<ContentModels.Site>();
     var logoSrc = ((Image)site.Value("logo")).Url;
+
 }
 <html>
-<head>
-    <img src="@logoSrc" style="width:100px;" />
+<head>    
     <title>@site.Value("title")</title>
+    <link rel="stylesheet" href="~/css/Libs/Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/myStyles.css" />
+    <script src="~/scripts/Libs/Bootstrap/bootstrap.js"></script>
 </head>
+
 <section class="sidebar">
-    @Html.Partial("Task21/Site/navigations/Main",site, new ViewDataDictionary { { "page", Model} })
+    @Html.Partial("Task21/Site/navigations/Main", site, new ViewDataDictionary { { "page", Model } })
 </section>
-<body>
+<body class="main">
+    <img src="@logoSrc" style="width:100px;" />
     @RenderBody()
     <footer>@Html.Raw(site.Value("copyRights"))</footer>
 </body>

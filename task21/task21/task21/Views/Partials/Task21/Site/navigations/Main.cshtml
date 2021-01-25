@@ -4,8 +4,8 @@
     var site = Model;
     var page = (IPublishedContent)ViewData["page"];
 }
-<nav class="main" style="width:150px;">
-    @RenderChildNodes(site)    
+<nav class="myNav">
+    @RenderChildNodes(site)
 </nav>
 
 
@@ -19,12 +19,10 @@
             title = string.IsNullOrWhiteSpace(title.ToString()) ? item.Value("title") : title;
             if ((bool)item.Value("isVisibleInMenu"))
             {
-        <li>
-            <!--<span>@title</span>-->
-            <!--<a class="nav-link @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@item.Url">@item.Name</a>-->
-            <a class="nav-link @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@item.Url">@title</a>
-            @RenderChildNodes(item)
-        </li>
+                <li>                    
+                    <a class="nav-link @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@item.Url">@title</a>
+                    @RenderChildNodes(item)
+                </li>
             }
         }
     </ul>

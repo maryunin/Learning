@@ -290,7 +290,18 @@
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
+    <Content Include="css\Libs\Bootstrap\bootstrap-grid.css" />
+    <Content Include="css\Libs\Bootstrap\bootstrap-grid.min.css" />
+    <Content Include="css\Libs\Bootstrap\bootstrap-reboot.css" />
+    <Content Include="css\Libs\Bootstrap\bootstrap-reboot.min.css" />
+    <Content Include="css\Libs\Bootstrap\bootstrap.css" />
+    <Content Include="css\Libs\Bootstrap\bootstrap.min.css" />
+    <Content Include="css\myStyles.css" />
     <Content Include="Global.asax" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap.bundle.js" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap.bundle.min.js" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap.js" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -308,12 +319,25 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
+    <Content Include="css\Libs\Bootstrap\bootstrap-grid.css.map" />
+    <Content Include="css\Libs\Bootstrap\bootstrap-grid.min.css.map" />
+    <Content Include="css\Libs\Bootstrap\bootstrap-reboot.css.map" />
+    <Content Include="css\Libs\Bootstrap\bootstrap-reboot.min.css.map" />
+    <Content Include="css\Libs\Bootstrap\bootstrap.css.map" />
+    <Content Include="css\Libs\Bootstrap\bootstrap.min.css.map" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Site.cshtml" />
     <Content Include="Views\Homepage.cshtml" />
     <Content Include="Views\freeHtmlPage.cshtml" />
     <Content Include="Views\Partials\Task21\Site\navigations\Main.cshtml" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap.bundle.js.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap.bundle.min.js.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap.js.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap.min.js.map" />
+    <Content Include="Views\SecondPage.cshtml" />
+    <Content Include="Views\ThirdPage.cshtml" />
+    <Content Include="Views\Fourth.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
