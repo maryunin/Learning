@@ -348,6 +348,12 @@
   <ItemGroup>
     <Folder Include="Views\Shared\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeBase\CodeBase.csproj">
+      <Project>{b3f614cf-5507-48a5-b235-31ff3e3c6d68}</Project>
+      <Name>CodeBase</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

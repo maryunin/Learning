@@ -41,7 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\APage.generated.cs" >
+      <DependentUpon>_auto.build.model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CFreeHtmlPage.generated.cs" />
+    <Compile Include="Models\CHome.generated.cs" />
+    <Compile Include="Models\File.generated.cs" />
+    <Compile Include="Models\Five.generated.cs" />
+    <Compile Include="Models\Folder.generated.cs" />
+    <Compile Include="Models\Fourth.generated.cs" />
+    <Compile Include="Models\Image.generated.cs" />
+    <Compile Include="Models\Member.generated.cs" />
     <Compile Include="Models\Pages\Site.cs" />
+    <Compile Include="Models\SecondPage.generated.cs" />
+    <Compile Include="Models\Site.generated.cs" />
+    <Compile Include="Models\ThirdPage.generated.cs" />
+    <Compile Include="Models\TMenuSetup.generated.cs" />
+    <Compile Include="Models\_auto.build.model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
