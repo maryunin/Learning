@@ -1,0 +1,6 @@
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\CodeBase.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\CodeBase.pdb
+D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.csprojAssemblyReference.cache
+D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.csproj.CoreCompileInputs.cache
+D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.dll
+D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.pdb
