@@ -5,34 +5,49 @@
     var page = (APage)ViewData["page"];
     selectedPages = page.Path.Split(new string[] { "," }, StringSplitOptions.None).Select(x => int.Parse(x)).ToArray();
 }
-<nav class="breadcrumb">    
-    @RenderBreadCrumbs(site, 0)
+<nav class="breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            @RenderBreadCrumbs(site, 0)
+        </ol>
+    </nav>
+    @RenderBreadCrumbs2()
 </nav>
 
 @helper RenderBreadCrumbs(IPublishedContent parent, int level)
-{
-    var childs = parent?.Children().OfType<APage>();
-    <ul>
-        @foreach (IPublishedContent pitem in childs)
+    {
+        var childs = parent?.Children().OfType<APage>();
+        foreach (IPublishedContent pitem in childs)
         {
             var menu = (pitem.Value("menu") as IEnumerable<IPublishedElement>).FirstOrDefault();
             var title = menu?.Value("title");
             title = string.IsNullOrWhiteSpace(title?.ToString()) ? pitem.Value("title") : title;
             var isActive = selectedPages.Contains(pitem.Id);
             var className = isActive ? "active" : "";
-            
             if (!(((bool?)menu?.Value("isVHidden")) ?? false) && isActive)
             {
-                <li class="@className">
-                    <a class="breadcrumb @(pitem.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@pitem.Url">@title</a>
-                    @if (isActive)
-                    {
-                        @RenderBreadCrumbs(pitem, level + 1)
-                    }
+                <li class="breadcrumb-item">
+                    <a class=" @(pitem.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@pitem.Url">@title</a>
+                    @RenderBreadCrumbs(pitem, level + 1)
                 </li>
             }
-        }
-    </ul>
+        }        
+}
+
+@helper RenderBreadCrumbs2()
+{
+    var ancesors = Model.Ancestors();
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            @foreach (var node in ancesors)
+            {
+                <li class="breadcrumb-item"><a href="@node.Url">test2 @node.Id</a></li>
+            }
+        </ol>
+    </nav>
+
+
+
 }
 
 @functions{

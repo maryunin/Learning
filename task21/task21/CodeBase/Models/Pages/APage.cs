@@ -8,12 +8,12 @@ using Umbraco.Web;
 namespace CodeBase.Models
 {
     public partial class APage
-    {
+    {        
         public Site GetCurrentSite()
         {
             //Debugger.Launch();
             var r = this.Ancestor<Site>();
             return r;
-        }
+        }                
     }
 }
