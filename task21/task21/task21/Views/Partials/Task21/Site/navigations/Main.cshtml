@@ -1,8 +1,8 @@
 ﻿@model Site
-@using ContentModels = Umbraco.Web.PublishedModels;
+@using CodeBase.Models;
 @{
     var site = Model;
-    var page = (IPublishedContent)ViewData["page"];
+    var page = (APage)ViewData["page"];
     selectedPages = page.Path.Split(new string[] { "," }, StringSplitOptions.None).Select(x => int.Parse(x)).ToArray();
 }
 <nav class="myNav">
@@ -13,7 +13,7 @@
 
 @helper RenderChildNodes(IPublishedContent parent, int level)
 {
-    var childs = parent?.Children().OfType<ContentModels.APage>();
+    var childs = parent?.Children().OfType<APage>();
     <ul>
         @foreach (IPublishedContent pitem in childs)
         {
