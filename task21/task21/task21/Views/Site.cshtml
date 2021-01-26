@@ -17,6 +17,9 @@
     @Html.Partial("Task21/Site/navigations/Main", site, new ViewDataDictionary { { "page", Model } })
 </section>
 <body class="main">
+    <div>        
+        @Html.Partial("Task21/Site/navigations/BreadCrumbs", site, new ViewDataDictionary { { "page", Model } })
+    </div>
     <img src="@site.LogoUrl" style="width:100px;" />
     @RenderBody()
     <footer>@Html.Raw(site.CopyRights)</footer>

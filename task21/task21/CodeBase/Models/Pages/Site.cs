@@ -10,5 +10,6 @@ namespace CodeBase.Models
     public partial class Site
     {
         public string LogoUrl => this.Logo.Url();
+        
     }
 }

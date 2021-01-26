@@ -5,13 +5,11 @@
     var page = (APage)ViewData["page"];
     selectedPages = page.Path.Split(new string[] { "," }, StringSplitOptions.None).Select(x => int.Parse(x)).ToArray();
 }
-<nav class="myNav">
-
-    @RenderChildNodes(site, 0)
+<nav class="breadcrumb">    
+    @RenderBreadCrumbs(site, 0)
 </nav>
 
-
-@helper RenderChildNodes(IPublishedContent parent, int level)
+@helper RenderBreadCrumbs(IPublishedContent parent, int level)
 {
     var childs = parent?.Children().OfType<APage>();
     <ul>
@@ -22,20 +20,20 @@
             title = string.IsNullOrWhiteSpace(title?.ToString()) ? pitem.Value("title") : title;
             var isActive = selectedPages.Contains(pitem.Id);
             var className = isActive ? "active" : "";
-            if (!(((bool?)menu?.Value("isVHidden")) ?? false))
+            
+            if (!(((bool?)menu?.Value("isVHidden")) ?? false) && isActive)
             {
                 <li class="@className">
-                    <a class="nav-link @(pitem.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@pitem.Url">@title</a>
+                    <a class="breadcrumb @(pitem.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@pitem.Url">@title</a>
                     @if (isActive)
                     {
-                        @RenderChildNodes(pitem, level + 1)
+                        @RenderBreadCrumbs(pitem, level + 1)
                     }
                 </li>
             }
         }
     </ul>
 }
-
 
 @functions{
     int[] selectedPages = new int[0];
