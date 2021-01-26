@@ -5,14 +5,14 @@
     var page = (APage)ViewData["page"];
     selectedPages = page.Path.Split(new string[] { "," }, StringSplitOptions.None).Select(x => int.Parse(x)).ToArray();
 }
-<nav class="breadcrumb">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            @RenderBreadCrumbs(site, 0)
-        </ol>
-    </nav>
-    @RenderBreadCrumbs2()
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        @RenderBreadCrumbs(site, 0)
+    </ol>
 </nav>
+    @*@RenderBreadCrumbs2()*@
+
 
 @helper RenderBreadCrumbs(IPublishedContent parent, int level)
     {
@@ -41,7 +41,7 @@
         <ol class="breadcrumb">
             @foreach (var node in ancesors)
             {
-                <li class="breadcrumb-item"><a href="@node.Url">test2 @node.Id</a></li>
+                <li class="breadcrumb-item"><a href="@node.Url">@node.Id</a></li>
             }
         </ol>
     </nav>
