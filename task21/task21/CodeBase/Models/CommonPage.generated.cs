@@ -19,43 +19,43 @@ using Umbraco.ModelsBuilder.Embedded;
 
 namespace CodeBase.Models
 {
-	/// <summary>five</summary>
-	[PublishedModel("five")]
-	public partial class Five : PublishedContentModel
+	/// <summary>CommonPage</summary>
+	[PublishedModel("commonPage")]
+	public partial class CommonPage : APage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.10.1")]
-		public new const string ModelTypeAlias = "five";
+		public new const string ModelTypeAlias = "commonPage";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.10.1")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.10.1")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.10.1")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Five, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<CommonPage, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Five(IPublishedContent content)
+		public CommonPage(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// myRichTE
+		/// Article
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.10.1")]
-		[ImplementPropertyType("myRichTE")]
-		public global::System.Web.IHtmlString MyRichTE => this.Value<global::System.Web.IHtmlString>("myRichTE");
+		[ImplementPropertyType("article")]
+		public string Article => this.Value<string>("article");
 
 		///<summary>
-		/// myTextString
+		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.10.1")]
-		[ImplementPropertyType("myTextString")]
-		public string MyTextString => this.Value<string>("myTextString");
+		[ImplementPropertyType("image")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Image => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("image");
 	}
 }

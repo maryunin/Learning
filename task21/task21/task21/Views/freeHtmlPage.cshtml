@@ -1,7 +1,8 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
-@using ContentModels = Umbraco.Web.PublishedModels;
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<CFreeHtmlPage>
+@using CodeBase.Models;
+
 @{
-    Layout =null;// "Site.cshtml";
+    Layout = "Site.cshtml";
 }
-<h1>@Html.Raw(@Model.Value("title"))</h1>
-@Html.Raw(@Model.Value("freeHtml"))
+<h1> @Html.Raw(Model.Title)</h1>
+@Html.Raw(Model.Value("freeHtml"))

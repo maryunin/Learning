@@ -6,15 +6,15 @@
     selectedPages = page.Path.Split(new string[] { "," }, StringSplitOptions.None).Select(x => int.Parse(x)).ToArray();
 }
 
-<nav aria-label="breadcrumb">
+@*<nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         @RenderBreadCrumbs(site, 0)
     </ol>
-</nav>
-    @RenderBreadCrumbs2()
+</nav>*@
+@RenderBreadCrumbs2()
 
 
-@helper RenderBreadCrumbs(IPublishedContent parent, int level)
+@*@helper RenderBreadCrumbs(IPublishedContent parent, int level)
     {
         var childs = parent?.Children().OfType<APage>();
         foreach (IPublishedContent pitem in childs)
@@ -32,25 +32,25 @@
                 </li>
             }
         }        
-}
+}*@
 
 @helper RenderBreadCrumbs2()
 {     
-    var children = Model.Children;
+    var page2 = (APage)ViewData["page"];
+    var ancestors = page2.Ancestors().ToList();
+    ancestors.Reverse();
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            @foreach (var node in children)
+        <ol class="breadcrumb">            
+        @foreach (var node in ancestors)
+        {
+            if (node.Level != 1)
             {
-                if (selectedPages.Contains(node.Id))
-                {
-                    <li class="breadcrumb-item"><a href="@node.Url">@node.Name</a></li>
-                }
+                <li class="breadcrumb-item"><a href="@node.Url">@node.Name</a></li>
             }
+        }
+        <li class="breadcrumb-item"><a href="@page2.Url">@page2.Name</a></li>
         </ol>
     </nav>
-
-
-
 }
 
 @functions{

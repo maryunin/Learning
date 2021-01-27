@@ -1,0 +1,14 @@
+﻿@*@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.CommonPage>
+@using ContentModels = CodeBase.Models;
+@{
+    Layout = null;
+}*@
+
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<CommonPage>
+@using CodeBase.Models;
+@{
+    Layout = "Site.cshtml";
+}
+<h1>@Html.Raw(@Model.Title)</h1>
+@Html.Raw(Model.Article)
+@Html.Raw(Model.Image)
