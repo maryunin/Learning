@@ -11,7 +11,7 @@
         @RenderBreadCrumbs(site, 0)
     </ol>
 </nav>
-    @*@RenderBreadCrumbs2()*@
+    @RenderBreadCrumbs2()
 
 
 @helper RenderBreadCrumbs(IPublishedContent parent, int level)
@@ -35,13 +35,16 @@
 }
 
 @helper RenderBreadCrumbs2()
-{
-    var ancesors = Model.Ancestors();
+{     
+    var children = Model.Children;
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            @foreach (var node in ancesors)
+            @foreach (var node in children)
             {
-                <li class="breadcrumb-item"><a href="@node.Url">@node.Id</a></li>
+                if (selectedPages.Contains(node.Id))
+                {
+                    <li class="breadcrumb-item"><a href="@node.Url">@node.Name</a></li>
+                }
             }
         </ol>
     </nav>
