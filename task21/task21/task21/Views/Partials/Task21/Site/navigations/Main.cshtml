@@ -6,20 +6,32 @@
     selectedPages = page.Path.Split(new string[] { "," }, StringSplitOptions.None).Select(x => int.Parse(x)).ToArray();
 }
 <nav class="myNav">
+    <ul>
+        @foreach (var (culture, csite) in site.Cultures)
+        {
+            <li>
+                <a href="@Model.Url(culture)">@(site.Value("title",culture))</a>
+            </li>
+        }
+    </ul>
+
+    <select>
+        @foreach (var (culture, infos) in Model.Cultures)
+        {
+            <option value="@Model.Url(culture)home/">@culture</option>
+
+        }
+    </select>
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
 
     @RenderChildNodes(site, 0)
-    <ul>
-    @foreach (var (culture, infos) in Model.Cultures)
-    {
-        <li>
-            <a href="@Model.Url(culture)home/">
-                @Model.Url(culture)
-                @*@Model.Value("language",culture)*@
-                @*@Umbraco.GetDictionaryValue("Settings/Languages/" + culture)*@
-            </a>
-        </li>
-    }
-    </ul>
 </nav>
 
 @helper RenderChildNodes(IPublishedContent parent, int level)

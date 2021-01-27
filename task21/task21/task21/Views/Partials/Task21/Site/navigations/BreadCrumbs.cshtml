@@ -1,12 +1,9 @@
 ﻿@model Site
 @using CodeBase.Models;
 
-@RenderBreadCrumbs()
-
-@helper RenderBreadCrumbs()
-{     
+@{    
     var page = (APage)ViewData["page"];
-    var ancestors = page.Ancestors().ToList();
+    var ancestors = page.AncestorsOrSelf<APage>().ToArray();
     ancestors.Reverse();
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">            
@@ -14,10 +11,9 @@
         {
             if (node.Level != 1)
             {
-                <li class="breadcrumb-item"><a href="@node.Url">@node.Name</a></li>
+                <li class="breadcrumb-item"><a href="@node.Url">@node.BreadcrumpTitle</a></li>
             }
-        }
-        <li class="breadcrumb-item"><a href="@page.Url">@page.Name</a></li>
+        }        
         </ol>
     </nav>
 }
