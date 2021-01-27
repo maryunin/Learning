@@ -8,8 +8,19 @@
 <nav class="myNav">
 
     @RenderChildNodes(site, 0)
+    <ul>
+    @foreach (var (culture, infos) in Model.Cultures)
+    {
+        <li>
+            <a href="@Model.Url(culture)home/">
+                @Model.Url(culture)
+                @*@Model.Value("language",culture)*@
+                @*@Umbraco.GetDictionaryValue("Settings/Languages/" + culture)*@
+            </a>
+        </li>
+    }
+    </ul>
 </nav>
-
 
 @helper RenderChildNodes(IPublishedContent parent, int level)
 {

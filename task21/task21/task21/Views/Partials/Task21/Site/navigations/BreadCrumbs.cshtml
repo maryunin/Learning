@@ -1,43 +1,12 @@
 ﻿@model Site
 @using CodeBase.Models;
-@{
-    var site = Model;
-    var page = (APage)ViewData["page"];
-    selectedPages = page.Path.Split(new string[] { "," }, StringSplitOptions.None).Select(x => int.Parse(x)).ToArray();
-}
 
-@*<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        @RenderBreadCrumbs(site, 0)
-    </ol>
-</nav>*@
-@RenderBreadCrumbs2()
+@RenderBreadCrumbs()
 
-
-@*@helper RenderBreadCrumbs(IPublishedContent parent, int level)
-    {
-        var childs = parent?.Children().OfType<APage>();
-        foreach (IPublishedContent pitem in childs)
-        {
-            var menu = (pitem.Value("menu") as IEnumerable<IPublishedElement>).FirstOrDefault();
-            var title = menu?.Value("title");
-            title = string.IsNullOrWhiteSpace(title?.ToString()) ? pitem.Value("title") : title;
-            var isActive = selectedPages.Contains(pitem.Id);
-            var className = isActive ? "active" : "";
-            if (!(((bool?)menu?.Value("isVHidden")) ?? false) && isActive)
-            {
-                <li class="breadcrumb-item">
-                    <a class=" @(pitem.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@pitem.Url">@title</a>
-                    @RenderBreadCrumbs(pitem, level + 1)
-                </li>
-            }
-        }        
-}*@
-
-@helper RenderBreadCrumbs2()
+@helper RenderBreadCrumbs()
 {     
-    var page2 = (APage)ViewData["page"];
-    var ancestors = page2.Ancestors().ToList();
+    var page = (APage)ViewData["page"];
+    var ancestors = page.Ancestors().ToList();
     ancestors.Reverse();
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">            
@@ -48,11 +17,7 @@
                 <li class="breadcrumb-item"><a href="@node.Url">@node.Name</a></li>
             }
         }
-        <li class="breadcrumb-item"><a href="@page2.Url">@page2.Name</a></li>
+        <li class="breadcrumb-item"><a href="@page.Url">@page.Name</a></li>
         </ol>
     </nav>
-}
-
-@functions{
-    int[] selectedPages = new int[0];
 }
