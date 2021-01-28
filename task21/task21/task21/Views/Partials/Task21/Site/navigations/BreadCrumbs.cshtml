@@ -3,7 +3,7 @@
 
 @{    
     var page = (APage)ViewData["page"];
-    var ancestors = page.AncestorsOrSelf<APage>().ToArray();
+    var ancestors = page.AncestorsOrSelf<APage>().ToList();
     ancestors.Reverse();
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">            

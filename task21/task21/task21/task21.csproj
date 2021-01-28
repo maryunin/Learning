@@ -341,6 +341,7 @@
     <Content Include="Views\Partials\Task21\Site\navigations\BreadCrumbs.cshtml" />
     <Content Include="Views\LanguageDropDown.cshtml" />
     <Content Include="Views\CommonPage.cshtml" />
+    <Content Include="Views\Partials\Task21\Site\navigations\Language.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,11 @@
+﻿@model Site
+@using CodeBase.Models;
+
+<ul>
+    @foreach (var (culture, csite) in Model.Cultures)
+    {
+        <li>
+            <a href="@Model.Url(culture)">@(Model.Value("title",culture))</a>
+        </li>
+    }
+</ul>

@@ -16,9 +16,10 @@
 
 <section class="sidebar">
     @Html.Partial("Task21/Site/navigations/Main", site, new ViewDataDictionary { { "page", Model } })
+    
 </section>
 <body class="main">
-    @*@Html.Partial("LanguageDropDown")*@
+    @Html.Partial("Task21/Site/navigations/Language", site, new ViewDataDictionary { { "page", Model } })
     @Html.Partial("Task21/Site/navigations/BreadCrumbs", site, new ViewDataDictionary { { "page", Model } })
     <img src="@site.LogoUrl" style="width:100px;" />
     @RenderBody()
