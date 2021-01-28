@@ -298,10 +298,22 @@
     <Content Include="css\Libs\Bootstrap\bootstrap.min.css" />
     <Content Include="css\myStyles.css" />
     <Content Include="Global.asax" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap-grid.css" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap-grid.min.css" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap-reboot.css" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap.css" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap.min.css" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.bundle.js" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.js" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.min.js" />
     <Content Include="scripts\Libs\Bootstrap\bootstrap.bundle.js" />
     <Content Include="scripts\Libs\Bootstrap\bootstrap.bundle.min.js" />
     <Content Include="scripts\Libs\Bootstrap\bootstrap.js" />
     <Content Include="scripts\Libs\Bootstrap\bootstrap.min.js" />
+    <Content Include="scripts\Libs\jQuery\jquery-3.5.1.min.js" />
+    <Content Include="scripts\Libs\Popper\popper.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -342,6 +354,16 @@
     <Content Include="Views\LanguageDropDown.cshtml" />
     <Content Include="Views\CommonPage.cshtml" />
     <Content Include="Views\Partials\Task21\Site\navigations\Language.cshtml" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap-grid.css.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap.css.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap.min.css.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.js.map" />
+    <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

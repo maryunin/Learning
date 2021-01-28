@@ -1,11 +1,14 @@
 ﻿@model Site
 @using CodeBase.Models;
 
-<ul>
-    @foreach (var (culture, csite) in Model.Cultures)
-    {
-        <li>
-            <a href="@Model.Url(culture)">@(Model.Value("title",culture))</a>
-        </li>
-    }
-</ul>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Language
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        @foreach (var (culture, csite) in Model.Cultures)
+        {
+            <a class="dropdown-item" href="@Model.Url(culture)">@(Model.Value("Language",culture))</a>
+        }
+        </div>
+</div>

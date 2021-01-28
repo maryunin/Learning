@@ -52,6 +52,13 @@ namespace CodeBase.Models
 		public string CopyRights => this.Value<string>("copyRights");
 
 		///<summary>
+		/// Language
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.10.1")]
+		[ImplementPropertyType("language")]
+		public string Language => this.Value<string>("language");
+
+		///<summary>
 		/// logo
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.10.1")]
