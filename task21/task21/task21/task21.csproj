@@ -347,11 +347,7 @@
     <Content Include="scripts\Libs\Bootstrap\bootstrap.bundle.min.js.map" />
     <Content Include="scripts\Libs\Bootstrap\bootstrap.js.map" />
     <Content Include="scripts\Libs\Bootstrap\bootstrap.min.js.map" />
-    <Content Include="Views\SecondPage.cshtml" />
-    <Content Include="Views\ThirdPage.cshtml" />
-    <Content Include="Views\Fourth.cshtml" />
     <Content Include="Views\Partials\Task21\Site\navigations\BreadCrumbs.cshtml" />
-    <Content Include="Views\LanguageDropDown.cshtml" />
     <Content Include="Views\CommonPage.cshtml" />
     <Content Include="Views\Partials\Task21\Site\navigations\Language.cshtml" />
     <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\css\bootstrap-grid.css.map" />

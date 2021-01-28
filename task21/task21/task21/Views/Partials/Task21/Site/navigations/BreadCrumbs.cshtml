@@ -9,7 +9,7 @@
         <ol class="breadcrumb">            
         @foreach (var node in ancestors)
         {
-            if (node.Level != 1)
+            if (node.Level != 1 && !node.isHidden)
             {
                 <li class="breadcrumb-item"><a href="@node.Url">@node.BreadcrumpTitle</a></li>
             }

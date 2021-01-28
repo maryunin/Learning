@@ -37,7 +37,7 @@ header {
 	right: 0px;
 	text-align: center;
 	background: #9b9b9b;
-	transition: 0.3s all ease-in-out;
+	transition: 0.3s all ease-in-out;	
 }
 header.navNarrow{
 	left: 60px;
@@ -92,4 +92,10 @@ footer.navNarrow{
 .card-img-top{
 	width: 16rem;
 	height: 9rem;
+}
+
+.LanguageSwitcher {
+	position: absolute !important;
+	top: 5px !important;
+	right: 0px !important;
 }

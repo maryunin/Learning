@@ -6,5 +6,7 @@
     var image = Model.Value<IPublishedContent>("Image");
 }
 <h1>@Html.Raw(@Model.Title)</h1>
+<div>
 @Html.Raw(Model.Article)
-<img src="@image.Url" />
+</div>
+<img src="@image.Url" style="width: 480px;" />

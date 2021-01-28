@@ -149,4 +149,3 @@ D:\Development\learning\task21\task21\CodeBase\bin\Debug\Umbraco.Web.pdb
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Umbraco.Web.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Umbraco.Web.UI.xml
 D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.csproj.CopyComplete
-D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.csprojAssemblyReference.cache
