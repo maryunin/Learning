@@ -3,7 +3,8 @@
 @using CodeBase.Models;
 @{
     Layout = "Site.cshtml";
+    var image = Model.Value<IPublishedContent>("Image");
 }
 <h1>@Html.Raw(@Model.Title)</h1>
 @Html.Raw(Model.Article)
-@Html.Raw(Model.Image)
+<img src="@image.Url" />
