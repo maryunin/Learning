@@ -23,6 +23,6 @@ namespace CodeBase.Models
 
         public string BreadcrumpTitle => string.IsNullOrWhiteSpace(this.Menu?.FirstOrDefault()?.BrTitle) ? MenuTitle : this.Menu?.FirstOrDefault()?.BrTitle;
 
-        
+        public bool isHidden => this.Menu?.FirstOrDefault()?.IsHidden ?? false;
     }
 }

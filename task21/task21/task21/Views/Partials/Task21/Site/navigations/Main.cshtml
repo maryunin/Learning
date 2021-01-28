@@ -6,10 +6,11 @@
     selectedPages = page.Path.Split(new string[] { "," }, StringSplitOptions.None).Select(x => int.Parse(x)).ToArray();
 }
 <nav class="myNav">
-    @RenderChildNodes(site, 0)
+    @*@RenderChildNodes(site, 0)*@
+    @RenderChildNodes(site)
 </nav>
 
-@helper RenderChildNodes(IPublishedContent parent, int level)
+@*@helper RenderChildNodes(IPublishedContent parent, int level)
 {
     var childs = parent?.Children().OfType<APage>();
     <ul>
@@ -27,6 +28,28 @@
                     @if (isActive)
                     {
                         @RenderChildNodes(pitem, level + 1)
+                    }
+                </li>
+            }
+        }
+    </ul>
+}*@
+
+@helper RenderChildNodes(IPublishedContent parent)
+{
+    var childs = parent?.Children().OfType<APage>();
+    <ul>
+        @foreach (var pitem in childs)
+        {  
+            var isActive = selectedPages.Contains(pitem.Id);
+            var className = isActive ? "active" : "";
+            if (!pitem.isHidden)
+            {
+                <li class="@className">
+                    <a class="nav-link @(pitem.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@pitem.Url">@pitem.MenuTitle</a>
+                    @if (isActive)
+                    {
+                        @RenderChildNodes(pitem)
                     }
                 </li>
             }
