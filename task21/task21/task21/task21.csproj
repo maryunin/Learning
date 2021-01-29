@@ -317,7 +317,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -361,7 +360,7 @@
     <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.bundle.min.js.map" />
     <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.js.map" />
     <Content Include="scripts\Libs\Bootstrap\bootstrap-4.0.0-dist\js\bootstrap.min.js.map" />
-    <Content Include="Views\Partials\_Login.cshtml" />
+    <Content Include="Views\Partials\Task21\member\_Login.cshtml" />
     <Content Include="Views\Partials\_Logout.cshtml" />
     <Content Include="Views\Login.cshtml" />
     <None Include="Web.Debug.config">

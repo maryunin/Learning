@@ -243,6 +243,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Models\APage.generated.cs">
       <DependentUpon>_auto.build.model.cs</DependentUpon>
     </Compile>
@@ -267,7 +268,8 @@
     </Compile>
     <Compile Include="Models\Pages\APage.cs" />
     <Compile Include="Models\Pages\CommonPage.cs" />
-    <Compile Include="Models\Pages\LoginModel.cs" />
+    <Compile Include="ViewModels\Class1.cs" />
+    <Compile Include="ViewModels\LoginModel.cs" />
     <Compile Include="Models\Pages\Site.cs">
       <DependentUpon>_auto.build.model.cs</DependentUpon>
     </Compile>
@@ -281,7 +283,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controllers\Admin\" />
     <Folder Include="Models\Components\" />
+    <Folder Include="Models\Pages\Members\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
