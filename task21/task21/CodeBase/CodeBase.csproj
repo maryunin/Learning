@@ -267,6 +267,7 @@
     </Compile>
     <Compile Include="Models\Pages\APage.cs" />
     <Compile Include="Models\Pages\CommonPage.cs" />
+    <Compile Include="Models\Pages\LoginModel.cs" />
     <Compile Include="Models\Pages\Site.cs">
       <DependentUpon>_auto.build.model.cs</DependentUpon>
     </Compile>
