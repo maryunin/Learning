@@ -1,14 +1,14 @@
-﻿@model Site
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Site>
 @using CodeBase.Models;
 
 <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Language
+        @Umbraco.GetDictionaryValue("languageButton.Title")
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         @foreach (var (culture, csite) in Model.Cultures)
         {
             <a class="dropdown-item" href="@Model.Url(culture)">@(Model.Value("Language",culture))</a>
         }
-        </div>
+    </div>
 </div>
