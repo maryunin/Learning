@@ -31,30 +31,28 @@ namespace task21.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult SubmitRegistration(RegisterModel model, string returnUrl) 
         {
-            if (ModelState.IsValid) 
+            if (!ModelState.IsValid || Util.IsMemberExist(model.Email))
+                return CurrentUmbracoPage();
+            
+            IMember newMember = Current.Services.MemberService.CreateMember(model.Email, model.Email, model.Name, "Member");
+
+            try 
             {
-                if (!Util.IsMemberExist(model.Email)) 
-                {
-                    IMember newMember = Current.Services.MemberService.CreateMember(model.Email, model.Email, model.Name, "Member");
+                Current.Services.MemberService.Save(newMember);
+                Current.Services.MemberService.SavePassword(newMember, model.Password);
+                Current.Services.MemberService.AssignRole(newMember.Id, "All members");
 
-                    try 
-                    {
-                        Current.Services.MemberService.Save(newMember);
-                        Current.Services.MemberService.SavePassword(newMember, model.Password);
-                        Current.Services.MemberService.AssignRole(newMember.Id, "All members");
+                if (newMember.Id > 0)
+                    return Redirect("/en/profile/login/");
+                else
+                    return CurrentUmbracoPage();
 
-                        if (newMember.Id > 0)
-                            return Redirect("/en/profile/login/");
-                        else
-                            return CurrentUmbracoPage();
-
-                    } 
-                    catch (Exception ex) 
-                    {
+            } 
+            catch (Exception ex) 
+            {
                         ; //add logging ?
-                    }
-                }
             }
+            
             return CurrentUmbracoPage();
         }
 

@@ -8,27 +8,38 @@
                 //{
                 using (Html.BeginUmbracoForm("SubmitRegistration", "Member", System.Web.Mvc.FormMethod.Post, new { id = "register" }))
                 {
-                        @Html.AntiForgeryToken()
-
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
                         @Html.LabelFor(m => m.Name)
-                        @Html.TextBoxFor(m => m.Name, new { placeholder = "Name" })
-
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Name, new { placeholder = "Name" })
+                        </div>
+                    </div>
+                    <div class="form-group">
                         @Html.LabelFor(m => m.Email)
-                        @Html.TextBoxFor(m => m.Email, new { placeholder = "Email" })
-
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Email, new { placeholder = "Email" })
+                        </div>
+                    </div>
+                    <div class="form-group">
                         @Html.LabelFor(m => m.Password)
-                        @Html.PasswordFor(m => m.Password, new { placeholder = "Password" })
-
+                        <div class="col-md-10">
+                            @Html.PasswordFor(m => m.Password, new { placeholder = "Password" })
+                        </div>
+                    </div>
+                    <div class="form-group">
                         @Html.ValidationSummary()
-
-                        <button name="Register" type="submit">Submit</button>
+                        <div class="col-md-10" style="margin-top: 10px;">
+                            <button name="Register" type="submit">Submit</button>
+                        </div>
+                    </div>
                 }
-                    //}
-                    //else
-                    //{
-                    //    //todo: what in this case? redirect?
-                    //}
-            }
+                //}
+                //else
+                //{
+                //    //todo: what about this case? redirect?
+                //}
+             }
         </div>
     </div>
 </div>
