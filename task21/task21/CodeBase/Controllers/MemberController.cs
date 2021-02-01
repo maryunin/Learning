@@ -5,10 +5,16 @@ using System.Web;
 using System.Web.Mvc;
 
 using System.Web.Security;
+using System.Web.Mvc;
+using System.Web.Routing;
+using Umbraco.Core;
+using Umbraco.Core.Composing;
+using Umbraco.Core.Models;
 using Umbraco.Web.Mvc;
 using CodeBase.Models;
 using CodeBase.ViewModels.Models;
-using System.Web.Routing;
+using CodeBase.ViewModels;
+using CodeBase.Helpers;
 
 namespace task21.Controllers
 {
@@ -17,6 +23,40 @@ namespace task21.Controllers
 
         public const string Name = "member";
 
+        public ActionResult MemberRigistration()
+        {
+            return PartialView("MemberRigistration", new RegisterModel());
+        }
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public ActionResult SubmitRegistration(RegisterModel model, string returnUrl) 
+        {
+            if (ModelState.IsValid) 
+            {
+                if (!Util.IsMemberExist(model.Email)) 
+                {
+                    IMember newMember = Current.Services.MemberService.CreateMember(model.Email, model.Email, model.Name, "Member");
+
+                    try 
+                    {
+                        Current.Services.MemberService.Save(newMember);
+                        Current.Services.MemberService.SavePassword(newMember, model.Password);
+                        Current.Services.MemberService.AssignRole(newMember.Id, "All members");
+
+                        if (newMember.Id > 0)
+                            return Redirect("/en/profile/login/");
+                        else
+                            return CurrentUmbracoPage();
+
+                    } 
+                    catch (Exception ex) 
+                    {
+                        ; //add logging ?
+                    }
+                }
+            }
+            return CurrentUmbracoPage();
+        }
 
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult SubmitLogin(LoginModel model, string returnUrl = null)
