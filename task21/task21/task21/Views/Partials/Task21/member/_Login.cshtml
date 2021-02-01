@@ -1,4 +1,4 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<CodeBase.Models.LoginModel>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<CodeBase.ViewModels.Models.LoginModel>
 @using Umbraco.Web
 
 @if (!Umbraco.MemberIsLoggedOn())
@@ -30,5 +30,6 @@
 }
 else
 {
-    Html.RenderAction("RenderLogout", "Member");
+    Html.RenderPartial("_Logout");
+    //Html.RenderAction("RenderLogout", "Member");
 }

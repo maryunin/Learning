@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace CodeBase.Models
+namespace CodeBase.ViewModels.Models
 {
     public class LoginModel
     {

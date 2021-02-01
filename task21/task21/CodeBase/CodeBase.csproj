@@ -244,10 +244,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Models\AMemberPage.generated.cs">
+      <DependentUpon>_auto.build.model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\APage.generated.cs">
       <DependentUpon>_auto.build.model.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CHome.generated.cs">
+      <DependentUpon>_auto.build.model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CMemberLoginPage.generated.cs">
+      <DependentUpon>_auto.build.model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CMemberProfilePage.generated.cs">
       <DependentUpon>_auto.build.model.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CommonPage.generated.cs">
@@ -268,7 +277,9 @@
     </Compile>
     <Compile Include="Models\Pages\APage.cs" />
     <Compile Include="Models\Pages\CommonPage.cs" />
-    <Compile Include="ViewModels\Class1.cs" />
+    <Compile Include="Models\Register.generated.cs">
+      <DependentUpon>_auto.build.model.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\LoginModel.cs" />
     <Compile Include="Models\Pages\Site.cs">
       <DependentUpon>_auto.build.model.cs</DependentUpon>

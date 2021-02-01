@@ -5,35 +5,10 @@
     var page = (APage)ViewData["page"];
     selectedPages = page.Path.Split(new string[] { "," }, StringSplitOptions.None).Select(x => int.Parse(x)).ToArray();
 }
-<nav class="myNav">
-    @*@RenderChildNodes(site, 0)*@
+<nav class="myNav">    
     @RenderChildNodes(site)
 </nav>
 
-@*@helper RenderChildNodes(IPublishedContent parent, int level)
-{
-    var childs = parent?.Children().OfType<APage>();
-    <ul>
-        @foreach (IPublishedContent pitem in childs)
-        {
-            var menu = (pitem.Value("menu") as IEnumerable<IPublishedElement>).FirstOrDefault();
-            var title = menu?.Value("title");
-            title = string.IsNullOrWhiteSpace(title?.ToString()) ? pitem.Value("title") : title;
-            var isActive = selectedPages.Contains(pitem.Id);
-            var className = isActive ? "active" : "";
-            if (!(((bool?)menu?.Value("isVHidden")) ?? false))
-            {
-                <li class="@className">
-                    <a class="nav-link @(pitem.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@pitem.Url">@title</a>
-                    @if (isActive)
-                    {
-                        @RenderChildNodes(pitem, level + 1)
-                    }
-                </li>
-            }
-        }
-    </ul>
-}*@
 
 @helper RenderChildNodes(IPublishedContent parent)
 {

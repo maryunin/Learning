@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Security;
 using Umbraco.Web.Mvc;
 using CodeBase.Models;
+using CodeBase.ViewModels.Models;
 using System.Web.Routing;
 
 namespace task21.Controllers
@@ -26,9 +27,10 @@ namespace task21.Controllers
 
             //Microsoft.Identity
             FormsAuthentication.SetAuthCookie(model.Username, false);
-            UrlHelper myHelper = new UrlHelper(HttpContext.Request.RequestContext);
+            //UrlHelper myHelper = new UrlHelper(HttpContext.Request.RequestContext);
             if (!string.IsNullOrWhiteSpace(returnUrl))
-                return Redirect(returnUrl);
+                //return Redirect(returnUrl);
+                return Redirect("/en/home");
             return CurrentUmbracoPage();
         }
 

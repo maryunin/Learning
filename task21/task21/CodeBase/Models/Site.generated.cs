@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder.Embedded;
 
 namespace CodeBase.Models
 {
-	/// <summary>Site</summary>
+	/// <summary>#Site</summary>
 	[PublishedModel("site")]
 	public partial class Site : PublishedContentModel
 	{
@@ -66,11 +66,11 @@ namespace CodeBase.Models
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Logo => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("logo");
 
 		///<summary>
-		/// title
+		/// #title: #title.Info
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.10.1")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
+		[ImplementPropertyType("ttitle")]
+		public string Ttitle => this.Value<string>("ttitle");
 
 		///<summary>
 		/// Home page
