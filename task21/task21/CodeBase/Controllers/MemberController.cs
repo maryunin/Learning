@@ -26,6 +26,8 @@ namespace task21.Controllers
         public ActionResult MemberRigistration()
         {
             return PartialView("MemberRigistration", new RegisterModel());
+            // circle links, perhaps it should be changed ???
+            // Register.cshtml > this action > MemberRigistration.cshtml
         }
 
         [HttpPost, ValidateAntiForgeryToken]
@@ -34,7 +36,7 @@ namespace task21.Controllers
             if (!ModelState.IsValid || Util.IsMemberExist(model.Email))
                 return CurrentUmbracoPage();
             
-            IMember newMember = Current.Services.MemberService.CreateMember(model.Email, model.Email, model.Name, "Member");
+            IMember newMember = Current.Services.MemberService.CreateMember(model.Username, model.Email, model.Name, "Member");
 
             try 
             {
@@ -42,15 +44,14 @@ namespace task21.Controllers
                 Current.Services.MemberService.SavePassword(newMember, model.Password);
                 Current.Services.MemberService.AssignRole(newMember.Id, "All members");
 
-                if (newMember.Id > 0)
+                if (newMember.Id > 0) // is it correct ???
                     return Redirect("/en/profile/login/");
                 else
                     return CurrentUmbracoPage();
-
             } 
             catch (Exception ex) 
             {
-                        ; //add logging ?
+                ; //add logging ?
             }
             
             return CurrentUmbracoPage();

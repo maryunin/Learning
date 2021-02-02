@@ -13,6 +13,10 @@ namespace CodeBase.ViewModels
         [Required]
         public string Name { get; set; }
 
+        [Display(Name = "Username")]
+        [Required]
+        public string Username { get; set; }
+
         [Display(Name = "Email")]
         [Required]
         public string Email { get; set; }
