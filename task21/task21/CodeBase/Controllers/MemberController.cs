@@ -31,33 +31,51 @@ namespace task21.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult SubmitRegistration(RegisterModel model, string returnUrl) 
         {
-            SendEmail mySender = new SendEmail();
-            mySender.Send();
 
-            //if (!ModelState.IsValid || Util.IsMemberExist(model.Email))
-            //    return CurrentUmbracoPage();
-            
-            //IMember newMember = Current.Services.MemberService.CreateMember(model.Username, model.Email, model.Name, "Member");
+            if (!ModelState.IsValid || Util.IsMemberExist(model.Email))
+                return CurrentUmbracoPage();
 
-            //try 
-            //{
-            //    Current.Services.MemberService.Save(newMember);
-            //    Current.Services.MemberService.SavePassword(newMember, model.Password);
-            //    Current.Services.MemberService.AssignRole(newMember.Id, "All members");
-            //    var ticket = new FormsAuthenticationTicket(model.Username, true, 1 * 1440);
-            //    //ticket.UserData
-            //    var t = FormsAuthentication.Encrypt(ticket);
-            //    if (newMember.Id > 0) // is it correct ???
-            //        return Redirect("/en/profile/login/");
-            //    else
-            //        return CurrentUmbracoPage();
-            //} 
-            //catch (Exception ex) 
-            //{
-            //    ; //add logging ?
-            //}
-            
+            var newMember = Current.Services.MemberService.CreateMember(model.Username, model.Email, model.Name, "Member");
+
+            try
+            {
+                newMember.IsApproved = false;
+                Current.Services.MemberService.Save(newMember);
+                Current.Services.MemberService.SavePassword(newMember, model.Password);
+                Current.Services.MemberService.AssignRole(newMember.Id, "All members");
+                var ticket = new FormsAuthenticationTicket(model.Username, true, 1 * 1440);
+                //ticket.UserData
+                var t = FormsAuthentication.Encrypt(ticket);
+                if (newMember.Id > 0)
+                {                    
+                    SendEmail mySender = new SendEmail();
+                    mySender.Send(model.Email, Url.Action("ConfirmEmail", "Member", new RouteValueDictionary(new { email = model.Email }), Request.Url.Scheme, null));
+                    //RedirectToAction("ConfirmEmail", new RouteValueDictionary(new { email = model.Email }));
+                    return Content("Please check your email to confirm the entered address.");
+                }
+                else
+                    return CurrentUmbracoPage();
+            }
+            catch (Exception ex)
+            {
+                return Content("It seems that something went wrong ...");
+            }
+
             return CurrentUmbracoPage();
+        }
+
+        public ActionResult ConfirmEmail(string email = null) 
+        {
+            if (email == null)
+                return Content("Email is null");
+            
+            var member = Current.Services.MemberService.GetByEmail(email);
+            // ?/todo: how to check whether member is obtained correctly ?
+            member.IsApproved = true;
+            Current.Services.MemberService.Save(member);
+            
+            //return Content("ConfirmEmail page: " + email ?? "");
+            return Redirect("/en/profile/login/");
         }
 
         [HttpPost, ValidateAntiForgeryToken]

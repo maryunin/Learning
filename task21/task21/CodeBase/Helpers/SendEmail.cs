@@ -19,9 +19,11 @@ namespace CodeBase.Helpers
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
                 mail.From = new MailAddress("alexey.maryunin@gmail.com");
-                mail.To.Add("alexey_m@ukr.net");
+                //mail.To.Add("alexey_m@ukr.net");
+                mail.To.Add(email);
                 mail.Subject = "Test Mail";
-                mail.Body = "This is for testing SMTP mail from GMAIL";
+                //mail.Body = "This is for testing SMTP mail from GMAIL";
+                mail.Body = message;
 
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new System.Net.NetworkCredential("alexey.maryunin@gmail.com", "Lexa2407");
