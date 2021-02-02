@@ -12,7 +12,6 @@ using Umbraco.Core.Composing;
 using Umbraco.Core.Models;
 using Umbraco.Web.Mvc;
 using CodeBase.Models;
-using CodeBase.ViewModels.Models;
 using CodeBase.ViewModels;
 using CodeBase.Helpers;
 
@@ -68,9 +67,9 @@ namespace task21.Controllers
             FormsAuthentication.SetAuthCookie(model.Username, false);
             //UrlHelper myHelper = new UrlHelper(HttpContext.Request.RequestContext);
             if (!string.IsNullOrWhiteSpace(returnUrl))
-                //return Redirect(returnUrl);
-                return Redirect("/en/home");
-            return CurrentUmbracoPage();
+                return Redirect(returnUrl);
+            //return CurrentUmbracoPage();
+            return Redirect("/en/home");
         }
 
 
