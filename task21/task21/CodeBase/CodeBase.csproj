@@ -244,6 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Helpers\SendEmail.cs" />
     <Compile Include="Helpers\Util.cs" />
     <Compile Include="Models\AMemberPage.generated.cs">
       <DependentUpon>_auto.build.model.cs</DependentUpon>

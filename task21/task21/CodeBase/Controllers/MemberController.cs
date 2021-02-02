@@ -19,7 +19,6 @@ namespace task21.Controllers
 {
     public class MemberController : SurfaceController
     {
-
         public const string Name = "member";
 
         public ActionResult MemberRigistration()
@@ -32,26 +31,31 @@ namespace task21.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult SubmitRegistration(RegisterModel model, string returnUrl) 
         {
-            if (!ModelState.IsValid || Util.IsMemberExist(model.Email))
-                return CurrentUmbracoPage();
+            SendEmail mySender = new SendEmail();
+            mySender.Send();
+
+            //if (!ModelState.IsValid || Util.IsMemberExist(model.Email))
+            //    return CurrentUmbracoPage();
             
-            IMember newMember = Current.Services.MemberService.CreateMember(model.Username, model.Email, model.Name, "Member");
+            //IMember newMember = Current.Services.MemberService.CreateMember(model.Username, model.Email, model.Name, "Member");
 
-            try 
-            {
-                Current.Services.MemberService.Save(newMember);
-                Current.Services.MemberService.SavePassword(newMember, model.Password);
-                Current.Services.MemberService.AssignRole(newMember.Id, "All members");
-
-                if (newMember.Id > 0) // is it correct ???
-                    return Redirect("/en/profile/login/");
-                else
-                    return CurrentUmbracoPage();
-            } 
-            catch (Exception ex) 
-            {
-                ; //add logging ?
-            }
+            //try 
+            //{
+            //    Current.Services.MemberService.Save(newMember);
+            //    Current.Services.MemberService.SavePassword(newMember, model.Password);
+            //    Current.Services.MemberService.AssignRole(newMember.Id, "All members");
+            //    var ticket = new FormsAuthenticationTicket(model.Username, true, 1 * 1440);
+            //    //ticket.UserData
+            //    var t = FormsAuthentication.Encrypt(ticket);
+            //    if (newMember.Id > 0) // is it correct ???
+            //        return Redirect("/en/profile/login/");
+            //    else
+            //        return CurrentUmbracoPage();
+            //} 
+            //catch (Exception ex) 
+            //{
+            //    ; //add logging ?
+            //}
             
             return CurrentUmbracoPage();
         }
