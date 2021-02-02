@@ -49,8 +49,8 @@ namespace task21.Controllers
                 if (newMember.Id > 0)
                 {                    
                     SendEmail mySender = new SendEmail();
-                    mySender.Send(model.Email, Url.Action("ConfirmEmail", "Member", new RouteValueDictionary(new { email = model.Email }), Request.Url.Scheme, null));
-                    //RedirectToAction("ConfirmEmail", new RouteValueDictionary(new { email = model.Email }));
+                    mySender.Send(model.Email, Url.Action("ConfirmEmail", "Member", 
+                        new RouteValueDictionary(new {encriptedTicket = t}), Request.Url.Scheme, null));                    
                     return Content("Please check your email to confirm the entered address.");
                 }
                 else
@@ -64,17 +64,14 @@ namespace task21.Controllers
             return CurrentUmbracoPage();
         }
 
-        public ActionResult ConfirmEmail(string email = null) 
-        {
-            if (email == null)
-                return Content("Email is null");
-            
-            var member = Current.Services.MemberService.GetByEmail(email);
-            // ?/todo: how to check whether member is obtained correctly ?
+        public ActionResult ConfirmEmail(string encriptedTicket) 
+        {            
+            var ticket = FormsAuthentication.Decrypt(encriptedTicket);
+            var member = Current.Services.MemberService.GetByUsername(ticket.Name);
+
             member.IsApproved = true;
-            Current.Services.MemberService.Save(member);
+            Current.Services.MemberService.Save(member);            
             
-            //return Content("ConfirmEmail page: " + email ?? "");
             return Redirect("/en/profile/login/");
         }
 
