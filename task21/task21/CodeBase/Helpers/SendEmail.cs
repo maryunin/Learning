@@ -8,9 +8,9 @@ using System.Net.Mail;
 
 namespace CodeBase.Helpers
 {
-    public class SendEmail
+    public class SendEmail : ISendEmail
     {
-        public bool Send(string email = "alexey_m@ukr.net", string message = @"http://task21/en/profile/") 
+        public bool Send(string email, string message) 
         {
             bool result;
             try
@@ -18,11 +18,9 @@ namespace CodeBase.Helpers
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("alexey.maryunin@gmail.com");
-                //mail.To.Add("alexey_m@ukr.net");
+                mail.From = new MailAddress("alexey.maryunin@gmail.com");                
                 mail.To.Add(email);
-                mail.Subject = "Test Mail";
-                //mail.Body = "This is for testing SMTP mail from GMAIL";
+                mail.Subject = "Email verification";                
                 mail.Body = message;
 
                 SmtpServer.Port = 587;

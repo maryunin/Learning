@@ -67,6 +67,8 @@ D:\Development\learning\task21\task21\task21\bin\roslyn\vbc.rsp
 D:\Development\learning\task21\task21\task21\bin\roslyn\VBCSCompiler.exe
 D:\Development\learning\task21\task21\task21\bin\roslyn\VBCSCompiler.exe.config
 D:\Development\learning\task21\task21\task21\bin\AngleSharp.dll
+D:\Development\learning\task21\task21\task21\bin\Autofac.dll
+D:\Development\learning\task21\task21\task21\bin\Autofac.Integration.Mvc.dll
 D:\Development\learning\task21\task21\task21\bin\ClientDependency.Core.dll
 D:\Development\learning\task21\task21\task21\bin\ClientDependency.Core.Mvc.dll
 D:\Development\learning\task21\task21\task21\bin\CodeBase.dll
@@ -87,6 +89,7 @@ D:\Development\learning\task21\task21\task21\bin\Markdown.dll
 D:\Development\learning\task21\task21\task21\bin\Microsoft.AspNet.Identity.Core.dll
 D:\Development\learning\task21\task21\task21\bin\Microsoft.AspNet.Identity.Owin.dll
 D:\Development\learning\task21\task21\task21\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Development\learning\task21\task21\task21\bin\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Development\learning\task21\task21\task21\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Development\learning\task21\task21\task21\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Development\learning\task21\task21\task21\bin\Microsoft.IO.RecyclableMemoryStream.dll
@@ -113,11 +116,16 @@ D:\Development\learning\task21\task21\task21\bin\Serilog.Sinks.Async.dll
 D:\Development\learning\task21\task21\task21\bin\Serilog.Sinks.File.dll
 D:\Development\learning\task21\task21\task21\bin\Serilog.Sinks.Map.dll
 D:\Development\learning\task21\task21\task21\bin\Superpower.dll
+D:\Development\learning\task21\task21\task21\bin\System.Buffers.dll
 D:\Development\learning\task21\task21\task21\bin\System.Data.SqlServerCe.dll
 D:\Development\learning\task21\task21\task21\bin\System.Data.SqlServerCe.Entity.dll
 D:\Development\learning\task21\task21\task21\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Development\learning\task21\task21\task21\bin\System.Memory.dll
 D:\Development\learning\task21\task21\task21\bin\System.Net.Http.Formatting.dll
+D:\Development\learning\task21\task21\task21\bin\System.Numerics.Vectors.dll
+D:\Development\learning\task21\task21\task21\bin\System.Runtime.CompilerServices.Unsafe.dll
 D:\Development\learning\task21\task21\task21\bin\System.Threading.Tasks.Dataflow.dll
+D:\Development\learning\task21\task21\task21\bin\System.Threading.Tasks.Extensions.dll
 D:\Development\learning\task21\task21\task21\bin\System.ValueTuple.dll
 D:\Development\learning\task21\task21\task21\bin\System.Web.Helpers.dll
 D:\Development\learning\task21\task21\task21\bin\System.Web.Http.dll
@@ -135,6 +143,10 @@ D:\Development\learning\task21\task21\task21\bin\Umbraco.Web.UI.dll
 D:\Development\learning\task21\task21\task21\bin\CodeBase.pdb
 D:\Development\learning\task21\task21\task21\bin\CodeBase.dll.config
 D:\Development\learning\task21\task21\task21\bin\AngleSharp.xml
+D:\Development\learning\task21\task21\task21\bin\Autofac.pdb
+D:\Development\learning\task21\task21\task21\bin\Autofac.xml
+D:\Development\learning\task21\task21\task21\bin\Autofac.Integration.Mvc.pdb
+D:\Development\learning\task21\task21\task21\bin\Autofac.Integration.Mvc.xml
 D:\Development\learning\task21\task21\task21\bin\ClientDependency.Core.pdb
 D:\Development\learning\task21\task21\task21\bin\ClientDependency.Core.Mvc.pdb
 D:\Development\learning\task21\task21\task21\bin\CSharpTest.Net.Collections.xml
@@ -159,6 +171,7 @@ D:\Development\learning\task21\task21\task21\bin\Microsoft.AspNet.Identity.Core.
 D:\Development\learning\task21\task21\task21\bin\Microsoft.AspNet.Identity.Owin.xml
 D:\Development\learning\task21\task21\task21\bin\Microsoft.AspNet.SignalR.Core.pdb
 D:\Development\learning\task21\task21\task21\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Development\learning\task21\task21\task21\bin\Microsoft.Bcl.AsyncInterfaces.xml
 D:\Development\learning\task21\task21\task21\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
 D:\Development\learning\task21\task21\task21\bin\Microsoft.IO.RecyclableMemoryStream.pdb
 D:\Development\learning\task21\task21\task21\bin\Microsoft.Owin.xml
@@ -181,9 +194,14 @@ D:\Development\learning\task21\task21\task21\bin\Serilog.Sinks.Async.xml
 D:\Development\learning\task21\task21\task21\bin\Serilog.Sinks.File.xml
 D:\Development\learning\task21\task21\task21\bin\Serilog.Sinks.Map.xml
 D:\Development\learning\task21\task21\task21\bin\Superpower.xml
+D:\Development\learning\task21\task21\task21\bin\System.Buffers.xml
 D:\Development\learning\task21\task21\task21\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Development\learning\task21\task21\task21\bin\System.Memory.xml
 D:\Development\learning\task21\task21\task21\bin\System.Net.Http.Formatting.xml
+D:\Development\learning\task21\task21\task21\bin\System.Numerics.Vectors.xml
+D:\Development\learning\task21\task21\task21\bin\System.Runtime.CompilerServices.Unsafe.xml
 D:\Development\learning\task21\task21\task21\bin\System.Threading.Tasks.Dataflow.xml
+D:\Development\learning\task21\task21\task21\bin\System.Threading.Tasks.Extensions.xml
 D:\Development\learning\task21\task21\task21\bin\System.ValueTuple.xml
 D:\Development\learning\task21\task21\task21\bin\System.Web.Helpers.xml
 D:\Development\learning\task21\task21\task21\bin\System.Web.Http.xml

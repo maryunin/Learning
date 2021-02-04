@@ -18,6 +18,8 @@ D:\Development\learning\task21\task21\CodeBase\bin\Debug\CodeBase.dll.config
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\CodeBase.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\CodeBase.pdb
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\AngleSharp.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\Autofac.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\Autofac.Integration.Mvc.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\ClientDependency.Core.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\ClientDependency.Core.Mvc.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\CSharpTest.Net.Collections.dll
@@ -36,6 +38,7 @@ D:\Development\learning\task21\task21\CodeBase\bin\Debug\Markdown.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.Owin.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
@@ -60,11 +63,16 @@ D:\Development\learning\task21\task21\CodeBase\bin\Debug\Serilog.Sinks.Async.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Serilog.Sinks.File.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Serilog.Sinks.Map.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Superpower.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Buffers.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Data.SqlServerCe.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Data.SqlServerCe.Entity.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Memory.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Net.Http.Formatting.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Numerics.Vectors.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Threading.Tasks.Dataflow.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Threading.Tasks.Extensions.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.ValueTuple.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Web.Helpers.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Web.Http.dll
@@ -80,6 +88,10 @@ D:\Development\learning\task21\task21\CodeBase\bin\Debug\Umbraco.ModelsBuilder.E
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Umbraco.Web.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Umbraco.Web.UI.dll
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\AngleSharp.xml
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\Autofac.pdb
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\Autofac.xml
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\Autofac.Integration.Mvc.pdb
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\Autofac.Integration.Mvc.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\ClientDependency.Core.pdb
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\ClientDependency.Core.Mvc.pdb
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\CSharpTest.Net.Collections.xml
@@ -103,6 +115,7 @@ D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.AspNet.Identi
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.AspNet.SignalR.Core.pdb
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.Owin.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
@@ -124,9 +137,14 @@ D:\Development\learning\task21\task21\CodeBase\bin\Debug\Serilog.Sinks.Async.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Serilog.Sinks.File.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Serilog.Sinks.Map.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\Superpower.xml
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Buffers.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Memory.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Net.Http.Formatting.xml
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Numerics.Vectors.xml
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Threading.Tasks.Dataflow.xml
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.ValueTuple.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Web.Helpers.xml
 D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Web.Http.xml

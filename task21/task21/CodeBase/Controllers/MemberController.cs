@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 using System.Web.Security;
-using System.Web.Mvc;
 using System.Web.Routing;
 using Umbraco.Core;
 using Umbraco.Core.Composing;
@@ -14,11 +12,13 @@ using Umbraco.Web.Mvc;
 using CodeBase.Models;
 using CodeBase.ViewModels;
 using CodeBase.Helpers;
+using CodeBase;
+using Autofac;
 
 namespace task21.Controllers
 {
     public class MemberController : SurfaceController
-    {
+    {   
         public const string Name = "member";
 
         public ActionResult MemberRigistration()
@@ -30,10 +30,9 @@ namespace task21.Controllers
 
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult SubmitRegistration(RegisterModel model, string returnUrl) 
-        {
-
+        { 
             if (!ModelState.IsValid || Util.IsMemberExist(model.Email))
-                return CurrentUmbracoPage();
+                return CurrentUmbracoPage();            
 
             var newMember = Current.Services.MemberService.CreateMember(model.Username, model.Email, model.Name, "Member");
 
@@ -47,9 +46,11 @@ namespace task21.Controllers
                 //ticket.UserData
                 var t = FormsAuthentication.Encrypt(ticket);
                 if (newMember.Id > 0)
-                {                    
-                    SendEmail mySender = new SendEmail();
-                    mySender.Send(model.Email, Url.Action("ConfirmEmail", "Member", 
+                {
+                    //SendEmail mySender = new SendEmail();
+                    var container = AutofacConfig.GetContainer();
+                    ISendEmail sendEmail = container.Resolve<ISendEmail>();
+                    sendEmail.Send(model.Email, Url.Action("ConfirmEmail", "Member", 
                         new RouteValueDictionary(new {encriptedTicket = t}), Request.Url.Scheme, null));                    
                     return Content("Please check your email to confirm the entered address.");
                 }
