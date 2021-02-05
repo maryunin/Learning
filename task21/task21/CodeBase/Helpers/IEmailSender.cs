@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodeBase.Helpers
 {
-    public interface ISendEmail
+    public interface IEmailSender
     {
         bool Send(string email, string message);
     }

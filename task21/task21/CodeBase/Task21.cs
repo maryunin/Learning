@@ -28,7 +28,7 @@ namespace CodeBase
             return AutofacConfig.GetContainer().Resolve<T>();
         }
 
-        public static ISendEmail Email => Resolve<ISendEmail>();
+        public static IEmailSender Email => Resolve<IEmailSender>();
 
         public static string AddLog<T>(string message, Exception ex = null, int level = 0)
         {

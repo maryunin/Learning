@@ -20,7 +20,7 @@ namespace CodeBase
             var builder = new ContainerBuilder();
 
             //builder.RegisterType<SendEmail>().As<ISendEmail>();
-            builder.Register(c => new SendEmail()).As<ISendEmail>();
+            builder.Register(c => new MailSender()).As<IEmailSender>();
 
             builder.Register(c => new LogHelper()).As<ILogHelper>();
             

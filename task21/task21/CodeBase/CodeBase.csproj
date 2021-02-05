@@ -270,9 +270,9 @@
   <ItemGroup>
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Helpers\AutofacConfig.cs" />
-    <Compile Include="Helpers\ISendEmail.cs" />
+    <Compile Include="Helpers\IEmailSender.cs" />
     <Compile Include="Helpers\LogHelper.cs" />
-    <Compile Include="Helpers\SendEmail.cs" />
+    <Compile Include="Helpers\MailSender.cs" />
     <Compile Include="Helpers\Util.cs" />
     <Compile Include="Models\AMemberPage.generated.cs">
       <DependentUpon>_auto.build.model.cs</DependentUpon>
