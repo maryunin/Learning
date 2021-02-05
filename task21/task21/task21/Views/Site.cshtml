@@ -22,6 +22,9 @@
         @*<h1>@site.Title</h1>*@
         <h1>@Model.Title</h1>
     </div>
+    <div class="user">
+        @Html.Partial("Task21/member/_CurrentMember")
+    </div>
     <div class="LanguageSwitcher">
         @Html.Partial("Task21/Site/navigations/Language", site, new ViewDataDictionary { { "page", Model } })
     </div>
@@ -31,8 +34,8 @@
     @Html.Partial("Task21/Site/navigations/Main", site, new ViewDataDictionary { { "page", Model } })
 </section>
 
-<body class="main">    
-    @Html.Partial("Task21/Site/navigations/BreadCrumbs", site, new ViewDataDictionary { { "page", Model } })
+<body class="main">   
+    @Html.Partial("Task21/Site/navigations/BreadCrumbs", site, new ViewDataDictionary { { "page", Model } })    
     <img src="@site.LogoUrl" style="width:100px;" />
     @RenderBody()
     <footer>@Html.Raw(site.CopyRights)</footer>

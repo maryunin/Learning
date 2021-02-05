@@ -1,0 +1,17 @@
+﻿@*@inherits Umbraco.Web.Mvc.UmbracoViewPage<CodeBase.ViewModels.LoginModel>*@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@using Umbraco.Web
+
+@if (Umbraco.MemberIsLoggedOn())
+{
+    var myUser = System.Web.Security.Membership.GetUser();
+    if (myUser != null)
+    {
+        <p>Logged in as <span><strong>@myUser.UserName</strong></span></p>
+    }
+}
+else
+{
+    <p><strong>Anonymous user</strong></p>
+}

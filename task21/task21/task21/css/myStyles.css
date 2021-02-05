@@ -99,3 +99,13 @@ footer.navNarrow{
 	top: 5px !important;
 	right: 5px !important;
 }
+
+.user {
+	position: absolute;
+	top: 12px;
+	right: 120px;
+}
+
+.myBreadcrumb {
+
+}

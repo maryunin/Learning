@@ -13,9 +13,8 @@ namespace CodeBase.Helpers
 {
     public class MailSender : IEmailSender
     {
-        public bool Send(string email, string message) 
-        {
-            bool result;
+        public void Send(string email, string message) 
+        {            
             try
             {
                 //var settings = ConfigurationManager.GetSection("system.net/mailSettings/smtp") as ConfigurationSection;
@@ -34,13 +33,11 @@ namespace CodeBase.Helpers
                 //smtpClient.EnableSsl = true;
 
                 smtpClient.Send(mail);
-                result = true;
             }
             catch (Exception ex)
             {
-                result = false;
-            }
-            return result;           
+                Task21.AddLog<Task21>("An exception was thrown while sending a message to check email.", ex, 1);                
+            }        
         }
     }
 }

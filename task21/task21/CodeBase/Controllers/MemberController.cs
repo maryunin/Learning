@@ -56,10 +56,9 @@ namespace task21.Controllers
             }
             catch (Exception ex)
             {
+                Task21.AddLog<Task21>("An exception was thrown while registering a member.", ex, 1);
                 return Content("It seems that something went wrong ...");
             }
-
-            return CurrentUmbracoPage();
         }
 
         public ActionResult ConfirmEmail(string encriptedTicket) 
@@ -71,13 +70,15 @@ namespace task21.Controllers
             Current.Services.MemberService.Save(member);            
             
             return Redirect("/en/profile/login/");
+            //return RedirectToAction()
         }
 
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult SubmitLogin(LoginModel model, string returnUrl = null)
         {
             if (!Membership.ValidateUser(model.Username, model.Password))
-                ModelState.AddModelError("", Umbraco.GetDictionaryValue("Frontend.Account.Login.MemberPasswordError"));
+                //ModelState.AddModelError("", Umbraco.GetDictionaryValue("Frontend.Account.Login.MemberPasswordError"));
+                ModelState.AddModelError("", "Incorrect username or/and password entered");
             if (!ModelState.IsValid) return CurrentUmbracoPage();
 
             //Microsoft.Identity
