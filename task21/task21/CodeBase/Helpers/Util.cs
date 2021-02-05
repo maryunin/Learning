@@ -10,9 +10,14 @@ namespace CodeBase.Helpers
 {
     public class Util
     {
-        public static bool IsMemberExist(string email)
+        public static bool IsEmailAlreadyUsed(string email)
         {
             return Current.Services.MemberService.GetByEmail(email) != null;
+        }
+
+        public static bool IsUsernameAlreadyUsed(string username)
+        {
+            return Current.Services.MemberService.GetByUsername(username) != null;
         }
     }
 }

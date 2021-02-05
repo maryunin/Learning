@@ -30,10 +30,25 @@ namespace task21.Controllers
 
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult SubmitRegistration(RegisterModel model, string returnUrl) 
-        { 
-            if (!ModelState.IsValid || Util.IsMemberExist(model.Email))
-                return CurrentUmbracoPage();            
+        {
+            if (!ModelState.IsValid)
+            {
+               // ModelState.AddModelError("","Please enter correct data.");
+                return CurrentUmbracoPage();
+            }
 
+            if (Util.IsUsernameAlreadyUsed(model.Username))
+            {
+                ModelState.AddModelError("", "This username is already used");
+                return CurrentUmbracoPage();
+            }
+
+            if (Util.IsEmailAlreadyUsed(model.Email))
+            {
+                ModelState.AddModelError("", "This email is already used");
+                return CurrentUmbracoPage();
+            }
+            
             var newMember = Current.Services.MemberService.CreateMember(model.Username, model.Email, model.Name, "Member");
 
             try
@@ -46,13 +61,17 @@ namespace task21.Controllers
                 //ticket.UserData
                 var t = FormsAuthentication.Encrypt(ticket);
                 if (newMember.Id > 0)
-                {                                       
-                    Task21.Email.Send(model.Email, Url.Action("ConfirmEmail", "Member", 
-                        new RouteValueDictionary(new {encriptedTicket = t}), Request.Url.Scheme, null));                    
+                {
+                    Task21.Email.Send(model.Email, Url.Action("ConfirmEmail", "Member",
+                        new RouteValueDictionary(new { encriptedTicket = t }), Request.Url.Scheme, null));
                     return Content("Please check your email to confirm the entered address.");
                 }
                 else
+                {
+                    ModelState.AddModelError("", "An error occurred while creating a new member.");
+                    Task21.AddLog<Task21>("An error occurred while creating a new member.", null, 0);
                     return CurrentUmbracoPage();
+                }
             }
             catch (Exception ex)
             {
@@ -69,8 +88,7 @@ namespace task21.Controllers
             member.IsApproved = true;
             Current.Services.MemberService.Save(member);            
             
-            return Redirect("/en/profile/login/");
-            //return RedirectToAction()
+            return Redirect("/en/profile/login/");            
         }
 
         [HttpPost, ValidateAntiForgeryToken]
@@ -85,8 +103,7 @@ namespace task21.Controllers
             FormsAuthentication.SetAuthCookie(model.Username, false);
             //UrlHelper myHelper = new UrlHelper(HttpContext.Request.RequestContext);
             if (!string.IsNullOrWhiteSpace(returnUrl))
-                return Redirect(returnUrl);
-            //return CurrentUmbracoPage();
+                return Redirect(returnUrl);            
             return Redirect("/en/home");
         }
 
