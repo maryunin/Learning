@@ -22,7 +22,8 @@ namespace CodeBase
             //builder.RegisterType<SendEmail>().As<ISendEmail>();
             builder.Register(c => new SendEmail()).As<ISendEmail>();
 
-            //var ioContainer = builder.Build();            
+            builder.Register(c => new LogHelper()).As<ILogHelper>();
+            
             container = builder.Build();
 
             //DependencyResolver.SetResolver(new AutofacDependencyResolver(ioContainer));

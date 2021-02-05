@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
+using System.Web.Configuration;
+using System.Configuration;
+using System.Collections.Specialized;
 
 namespace CodeBase.Helpers
 {
@@ -15,6 +18,9 @@ namespace CodeBase.Helpers
             bool result;
             try
             {
+                var settings = ConfigurationManager.GetSection("system.net/mailSettings/smtp") as ConfigurationSection;
+                // ????? what is next ?????
+
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 

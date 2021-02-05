@@ -47,10 +47,8 @@ namespace task21.Controllers
                 var t = FormsAuthentication.Encrypt(ticket);
                 if (newMember.Id > 0)
                 {
-                    //SendEmail mySender = new SendEmail();
-                    var container = AutofacConfig.GetContainer();
-                    ISendEmail sendEmail = container.Resolve<ISendEmail>();
-                    sendEmail.Send(model.Email, Url.Action("ConfirmEmail", "Member", 
+                    //SendEmail mySender = new SendEmail();                    
+                    Task21.Email.Send(model.Email, Url.Action("ConfirmEmail", "Member", 
                         new RouteValueDictionary(new {encriptedTicket = t}), Request.Url.Scheme, null));                    
                     return Content("Please check your email to confirm the entered address.");
                 }

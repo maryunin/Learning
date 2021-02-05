@@ -20,17 +20,19 @@ namespace CodeBase
         protected void Application_Start()
         {
             AutofacConfig.ConfigureContainer();
-            //Task21.AddLog<Task21>("application start has been executed!", null, 1);
+            Task21.AddLog<Task21>("application start has been executed!", null, 0);
         }
 
-        //public static T Resolve<T>()
-        //{
-        //    return AutofacConfig.GetContainer().Resolve<T>();
-        //}
+        public static T Resolve<T>()
+        {
+            return AutofacConfig.GetContainer().Resolve<T>();
+        }
 
-        //public static string AddLog<T>(string message, Exception ex = null, int level = 0)
-        //{
-        //    return Task21.Resolve<ILogHelper>().AddLog<T>(message, ex, level);
-        //}
+        public static ISendEmail Email => Resolve<ISendEmail>();
+
+        public static string AddLog<T>(string message, Exception ex = null, int level = 0)
+        {
+            return Task21.Resolve<ILogHelper>().AddLog<T>(message, ex, level);
+        }
     }
 }
