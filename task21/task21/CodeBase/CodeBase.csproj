@@ -310,6 +310,9 @@
     <Compile Include="Models\Register.generated.cs">
       <DependentUpon>_auto.build.model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Simple.generated.cs">
+      <DependentUpon>_auto.build.model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Task21.cs" />
     <Compile Include="ViewModels\LoginModel.cs" />
     <Compile Include="Models\Pages\Site.cs">

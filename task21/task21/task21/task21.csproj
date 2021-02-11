@@ -396,6 +396,7 @@
     <Content Include="Views\Partials\MemberRigistration.cshtml" />
     <Content Include="Views\Partials\Task21\member\_CurrentMember.cshtml" />
     <Content Include="Views\Partials\_LoginRegisterLayout.cshtml" />
+    <Content Include="Views\Simple.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
