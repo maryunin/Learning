@@ -7,7 +7,7 @@
 
 @if (!Umbraco.MemberIsLoggedOn())
 {
-    using (Html.BeginUmbracoForm("SubmitLogin", "Member", FormMethod.Post, new { id = "login_", data_code = 1234, @class = "bla-bla-my-login-form" }))
+    using (Html.BeginUmbracoForm("SubmitLogin", "Member", FormMethod.Post, new { id = "login_"}))
     {
         @Html.AntiForgeryToken()
         <div class="form-group">

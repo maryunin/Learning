@@ -13,24 +13,15 @@ namespace CodeBase.Helpers
 {
     public class MailSender : IEmailSender
     {
-        public void Send(string email, string message) 
+        public void Send(string email, string message, string subject = "Email verification") 
         {            
             try
-            {
-                //var settings = ConfigurationManager.GetSection("system.net/mailSettings/smtp") as ConfigurationSection;
-                
-                MailMessage mail = new MailMessage();
-                //SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
-                var smtpClient = new SmtpClient();
-
-                //mail.From = new MailAddress("alexey.maryunin@gmail.com");                
+            {                
+                MailMessage mail = new MailMessage();                
+                var smtpClient = new SmtpClient();                             
                 mail.To.Add(email);
-                mail.Subject = "Email verification";                
+                mail.Subject = subject;                
                 mail.Body = message;
-
-                //smtpClient.Port = 587;
-                //smtpClient.Credentials = new System.Net.NetworkCredential("alexey.maryunin@gmail.com", "Lexa2407");
-                //smtpClient.EnableSsl = true;
 
                 smtpClient.Send(mail);
             }

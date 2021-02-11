@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Security;
-using System.Web.Routing;
-using Umbraco.Core;
-using Umbraco.Core.Composing;
-using Umbraco.Core.Models;
-using Umbraco.Web.Mvc;
-using CodeBase.Models;
-using CodeBase.ViewModels;
+﻿using CodeBase;
 using CodeBase.Helpers;
-using CodeBase;
-using Autofac;
+using CodeBase.ViewModels;
+using System;
+using System.Web.Mvc;
+using System.Web.Routing;
+using System.Web.Security;
+using Umbraco.Core.Composing;
+using Umbraco.Web.Mvc;
 
 namespace task21.Controllers
 {
@@ -39,7 +32,7 @@ namespace task21.Controllers
 
             if (Util.IsUsernameAlreadyUsed(model.Username))
             {
-                ModelState.AddModelError("", "This username is already used");
+                ModelState.AddModelError("",Umbraco.GetDictionaryValue("Frontend.Account.Registration.UserNameInUse", "This username is already used"));
                 return CurrentUmbracoPage();
             }
 
@@ -100,8 +93,7 @@ namespace task21.Controllers
             if (!ModelState.IsValid) return CurrentUmbracoPage();
 
             //Microsoft.Identity
-            FormsAuthentication.SetAuthCookie(model.Username, false);
-            //UrlHelper myHelper = new UrlHelper(HttpContext.Request.RequestContext);
+            FormsAuthentication.SetAuthCookie(model.Username, false);            
             if (!string.IsNullOrWhiteSpace(returnUrl))
                 return Redirect(returnUrl);            
             return Redirect("/en/home");

@@ -8,6 +8,6 @@ namespace CodeBase.Helpers
 {
     public interface IEmailSender
     {
-        void Send(string email, string message);
+        void Send(string email, string message, string subject = "");
     }
 }
