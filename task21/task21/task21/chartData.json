@@ -1,0 +1,16 @@
+{
+	"items": [
+		{
+			"Category": "Displays",
+			"Items": "2"
+		},
+		{
+			"Category": "Computers",
+			"Items": "1"
+		},
+		{
+			"Category": "Phones",
+			"Items": "1"
+		}
+	]
+}

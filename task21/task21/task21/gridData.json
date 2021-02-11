@@ -2,28 +2,28 @@
 	"items": [
 		{
 			"ProductName": "iiyama ProLite XB2783HSU",
-			"Category": "Display",
+			"Category": "Displays",
 			"Manufacturer": "Iiyama",
 			"InStock": "1",
 			"Price": "400"
 		},
 		{
 			"ProductName": "i7-4770K/12GB/SSD 256GB/int/ATX",
-			"Category": "Computer",
+			"Category": "Computers",
 			"Manufacturer": "Gigabyte",
 			"InStock": "1",
 			"Price": "850"
 		},
 		{
 			"ProductName": "Samsung SyncMaster 931c",
-			"Category": "Display",
+			"Category": "Displays",
 			"Manufacturer": "Samsung",
 			"InStock": "1",
 			"Price": "30"
 		},
 		{
 			"ProductName": "Samsung Galaxy A01",
-			"Category": "Phone",
+			"Category": "Phones",
 			"Manufacturer": "Samsung",
 			"InStock": "1",
 			"Price": "90"
