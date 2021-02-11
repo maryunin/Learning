@@ -1,20 +1,32 @@
 {
 	"items": [
 		{
-			"productName": "Tea",
-			"category": "Beverages"
+			"ProductName": "Iiyama ProLite XB2783HSU",
+			"Category": "Display",
+			"Manufacturer": "Iiyama",
+			"InStock": "1",
+			"Price": "400"
 		},
 		{
-			"productName": "Coffee",
-			"category": "Beverages"
+			"ProductName": "i7-4770K/12GB/SSD 256GB/int/ATX",
+			"Category": "Computer",
+			"Manufacturer": "Gigabyte",
+			"InStock": "1",
+			"Price": "850"
 		},
 		{
-			"productName": "Ham",
-			"category": "Food"
+			"ProductName": "Samsung SyncMaster 931c",
+			"Category": "Display",
+			"Manufacturer": "Samsung",
+			"InStock": "1",
+			"Price": "30"
 		},
 		{
-			"productName": "Bread",
-			"category": "Food"
+			"ProductName": "Samsung Galaxy A01",
+			"Category": "Phone",
+			"Manufacturer": "Samsung",
+			"InStock": "1",
+			"Price": "90"
 		}
 	]
 }
