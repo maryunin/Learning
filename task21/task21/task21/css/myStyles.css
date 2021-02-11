@@ -39,6 +39,11 @@ header {
 	background: #9b9b9b;
 	transition: 0.3s all ease-in-out;	
 }
+.siteLogo {
+	position: fixed;
+	top: 4px;
+	left: 204px;
+}
 header.navNarrow{
 	left: 60px;
 }

@@ -5,6 +5,7 @@
 }
 
 <div id="grid"></div>
+<div id="alert"></div>
 <script>
     var dataSource = new kendo.data.DataSource({
         transport: {
@@ -20,6 +21,19 @@
     });
     $("#grid").kendoGrid({
         dataSource: dataSource,
-        pageable: true
+        editable: true,
+        filterable: true,
+        groupable: true,
+        sortable: true,
+        pageable: true,
+        save: function (e) {
+            $("#alert").kendoAlert({
+                title: "Sorry",
+                content: "changes can't be saved for a while",
+                messages: {
+                    okText: "OK"
+                }
+            }).data("kendoAlert").open();
+        }
     });
 </script>

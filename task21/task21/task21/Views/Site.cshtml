@@ -24,6 +24,9 @@
 </head>
 
 <header>
+    <div class="siteLogo">
+        <img src="@site.LogoUrl" style="width:60px;" />
+    </div>
     <div class="d-inline">
         @*<h1>@site.Title</h1>*@
         <h1>@Model.Title</h1>
@@ -42,7 +45,7 @@
 
 <body class="main">   
     @Html.Partial("Task21/Site/navigations/BreadCrumbs", site, new ViewDataDictionary { { "page", Model } })    
-    <img src="@site.LogoUrl" style="width:100px;" />
+    
     @RenderBody()
     <footer>@Html.Raw(site.CopyRights)</footer>
 </body>
