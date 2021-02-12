@@ -1,0 +1,20 @@
+{
+    "dashboards":  [
+        {
+            "alias": "myDashboard",
+            "view":  "/App_Plugins/CustomDashboard/myDashboard.html",
+            "sections":  [ "settings" ],
+            "weight": -10,
+            "access": [
+                { "deny": "translator" },
+                { "grant": "admin" }
+            ]
+        }
+    ],
+	"javascript": [
+        "~/App_Plugins/CustomDashboard/customdashboard.controller.js"
+    ],
+    "css": [
+        "~/App_Plugins/CustomDashboard/customdashboard.css"
+    ]
+}
