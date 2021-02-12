@@ -14,7 +14,8 @@
 	"javascript": [
         "~/App_Plugins/CustomDashboard/customdashboard.controller.js"
     ],
-    "css": [
-        "~/App_Plugins/CustomDashboard/customdashboard.css"
-    ]
+  "css": [
+    "~/App_Plugins/CustomDashboard/customdashboard.css",
+    "~/css/Libs/Bootstrap/bootstrap.min.css"
+  ]
 }

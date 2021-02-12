@@ -1,4 +1,11 @@
+.my-dashboard {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
 .my-dashboard h1 {
-    font-size:2em;
-    color:purple;
+    font-size: 2em;
+}
+.leftButtons {
+    width: 150px;
 }

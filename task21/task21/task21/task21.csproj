@@ -295,6 +295,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\CustomDashboard\customdashboard.controller.js" />
+    <Content Include="App_Plugins\CustomDashboard\customdashboard.css" />
+    <Content Include="App_Plugins\CustomDashboard\lang\en-US.xml" />
+    <Content Include="App_Plugins\CustomDashboard\myDashboard.html" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -1884,6 +1888,7 @@
     <Content Include="css\Libs\Kendo\kendo.silver.mobile.min.css.map" />
     <Content Include="css\Libs\Kendo\kendo.uniform.min.css.map" />
     <Content Include="css\Libs\Kendo\kendo.uniform.mobile.min.css.map" />
+    <Content Include="App_Plugins\CustomDashboard\package.manifest" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Site.cshtml" />
