@@ -1,15 +1,15 @@
 ﻿function createGrid() {
-    var dataSource = new kendo.data.DataSource({
+    let dataSource = new kendo.data.DataSource({
         transport: {
             read: {
-                url: "http://task21/gridData.json",
+                url: "http://task21/large-file.json",
                 dataType: "json"
             }
         },
-        schema: {
-            data: "items"
-        },
-        pageSize: 10
+        //schema: {
+        //    data: "items"
+        //},
+        pageSize: 5
     });
     $("#grid").kendoGrid({
         dataSource: dataSource,
@@ -35,7 +35,7 @@ function createChart() {
         dataSource: {
             transport: {
                 read: {
-                    url: "http://task21/chartData.json",
+                    url: "http://task21/chartData3.json",
                     dataType: "json"
                 }
             },
@@ -58,9 +58,19 @@ function createChart() {
         },
         series:
             [{
-                field: "Items",
+                field: "Items1",
                 categoryField: "Category",
-                name: "Items"
+                name: "Items1"
+            },
+            {
+                field: "Items2",
+                categoryField: "Category",
+                name: "Items2"
+            },
+            {
+                field: "Items3",
+                categoryField: "Category",
+                name: "Items3"
             }],
         categoryAxis: {
             labels: {
@@ -85,6 +95,9 @@ function createChart() {
         }
     });
 }
-$(document).ready(createGrid);
-$(document).ready(createChart);
+
+$(document).ready(function () {
+    createGrid();
+    createChart();
+});
 $(document).bind("kendo:skinChange", createChart);

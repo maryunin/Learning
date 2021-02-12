@@ -167,3 +167,4 @@ D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.csproj.CoreCom
 D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.csproj.CopyComplete
 D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.dll
 D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.pdb
+D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.csprojAssemblyReference.cache

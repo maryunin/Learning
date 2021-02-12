@@ -1,0 +1,22 @@
+{
+	"items": [
+		{
+			"Category": "Displays",
+			"Items1": "3",
+			"Items2": "1",
+			"Items3": "2"
+		},
+		{
+			"Category": "Computers",
+			"Items1": "4",
+			"Items2": "1",
+			"Items3": "2"
+		},
+		{
+			"Category": "Phones",
+			"Items1": "3",
+			"Items2": "2",
+			"Items3": "2"
+		}
+	]
+}
