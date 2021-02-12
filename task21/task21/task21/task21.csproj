@@ -678,6 +678,7 @@
     <Content Include="scripts\Libs\Bootstrap\bootstrap.js" />
     <Content Include="scripts\Libs\Bootstrap\bootstrap.min.js" />
     <Content Include="scripts\Libs\jQuery\jquery-3.5.1.min.js" />
+    <Content Include="scripts\KendoWidgetsScript.js" />
     <Content Include="scripts\Libs\Kendo\angular.min.js" />
     <Content Include="scripts\Libs\Kendo\cultures\kendo.culture.aa-DJ.min.js" />
     <Content Include="scripts\Libs\Kendo\cultures\kendo.culture.aa-ER.min.js" />
