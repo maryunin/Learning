@@ -167,4 +167,7 @@ D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.csproj.CoreCom
 D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.csproj.CopyComplete
 D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.dll
 D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.pdb
-D:\Development\learning\task21\task21\CodeBase\obj\Debug\CodeBase.csprojAssemblyReference.cache
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Text.Encodings.Web.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Text.Json.dll
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Text.Encodings.Web.xml
+D:\Development\learning\task21\task21\CodeBase\bin\Debug\System.Text.Json.xml

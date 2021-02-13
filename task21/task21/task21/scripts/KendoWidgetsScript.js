@@ -1,21 +1,24 @@
 ﻿function createGrid() {
     let dataSource = new kendo.data.DataSource({
         transport: {
-            read: {
-                url: "http://task21/large-file.json",
-                dataType: "json"
+            read: {               
+                url: "http://task21/umbraco/Surface/DataProvider/GetGridItems",
+                dataType: "json",
+                type: "POST"
             }
         },
-        //schema: {
-        //    data: "items"
-        //},
+        schema: {
+            data: "data", 
+            total: "total"
+        },
+        serverPaging: true,
         pageSize: 5
     });
     $("#grid").kendoGrid({
         dataSource: dataSource,
         editable: true,
         filterable: true,
-        groupable: true,
+        //groupable: true,
         sortable: true,
         pageable: true,
         save: function (e) {

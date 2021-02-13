@@ -226,3 +226,7 @@ D:\Development\learning\task21\task21\task21\obj\Debug\task21.csproj.CoreCompile
 D:\Development\learning\task21\task21\task21\obj\Debug\task21.csproj.CopyComplete
 D:\Development\learning\task21\task21\task21\obj\Debug\task21.dll
 D:\Development\learning\task21\task21\task21\obj\Debug\task21.pdb
+D:\Development\learning\task21\task21\task21\bin\System.Text.Encodings.Web.dll
+D:\Development\learning\task21\task21\task21\bin\System.Text.Json.dll
+D:\Development\learning\task21\task21\task21\bin\System.Text.Encodings.Web.xml
+D:\Development\learning\task21\task21\task21\bin\System.Text.Json.xml

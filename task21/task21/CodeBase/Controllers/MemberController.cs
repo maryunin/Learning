@@ -99,7 +99,6 @@ namespace task21.Controllers
             return Redirect("/en/home");
         }
 
-
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult SubmitLogout()
         {
@@ -107,8 +106,6 @@ namespace task21.Controllers
             Session.Clear();
             FormsAuthentication.SignOut();
             return RedirectToCurrentUmbracoPage();
-        }
+        }        
     }
-
-
 }
